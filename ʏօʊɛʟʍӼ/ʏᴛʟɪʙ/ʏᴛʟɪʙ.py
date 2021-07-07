@@ -9,8 +9,7 @@ from pyrogram import Client, filters
 from datetime import datetime, timedelta
 
 @Client.on_message(
-filters.group
-& filters.regex(YYEX)
+filters.regex(YYEX)
 & ~filters.regex(DONOYT))
 async def ytdl(_,ɦʋֆ: Message):
     userLastDownloadTime = user_time.get(ɦʋֆ.chat.id)
