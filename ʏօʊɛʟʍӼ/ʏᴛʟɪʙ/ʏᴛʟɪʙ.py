@@ -11,16 +11,6 @@ from datetime import datetime, timedelta
 @Client.on_message(
 filters.regex(YYEX))
 async def ytdl(_,ɦʋֆ: Message):
-    userLastDownloadTime = user_time.get(ɦʋֆ.chat.id)
-    try:
-        if userLastDownloadTime > datetime.now():
-            HTS = await ɦʋֆ.reply_text(WTIF)
-            await asyncio.sleep(3)
-            await ɦʋֆ.delete()
-            await HTS.delete()
-            return
-    except:
-        pass
     url = ɦʋֆ.text.strip()
     await ɦʋֆ.reply_chat_action(CRAV)
     title, fetchedimage, formats = ytget_lib(url)
