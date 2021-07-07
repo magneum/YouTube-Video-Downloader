@@ -9,7 +9,8 @@ from pyrogram import Client, filters
 from datetime import datetime, timedelta
 
 @Client.on_message(
-filters.regex(YYEX)
+filters.private()
+& filters.regex(YYEX)
 & ~filters.regex(DONOYT))
 async def ytdl(_,ɦʋֆ: Message):
     userLastDownloadTime = user_time.get(ɦʋֆ.chat.id)
@@ -22,7 +23,11 @@ async def ytdl(_,ɦʋֆ: Message):
             return
     except:
         pass
+    
     url = ɦʋֆ.text.strip()
+    await ɦʋֆ.reply_chat_action(CRAV)
+    await ɦʋֆ.delete()
+    await ɦʋֆ.reply_chat_action(CRAV)
     title, fetchedimage, formats = ytget_lib(url)
     user_time[ɦʋֆ.chat.id] = datetime.now() + \
     timedelta(minutes=0)
