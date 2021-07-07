@@ -9,7 +9,7 @@ from pyrogram import Client, filters
 from datetime import datetime, timedelta
 
 @Client.on_message(
-filters.private()
+filters.private
 & filters.regex(YYEX)
 & ~filters.regex(DONOYT))
 async def ytdl(_,ɦʋֆ: Message):
