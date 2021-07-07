@@ -9,7 +9,7 @@ from pyrogram import Client, filters
 from datetime import datetime, timedelta
 
 @Client.on_message(
-filters.group
+filters.private
 & filters.regex(YYEX)
 & ~filters.regex(DONOYT))
 async def ytdl(_,ɦʋֆ: Message):
@@ -25,6 +25,7 @@ async def ytdl(_,ɦʋֆ: Message):
         pass
     url = ɦʋֆ.text.strip()
     await ɦʋֆ.reply_chat_action(CRAV)
+    await ɦʋֆ.delete()
     title, fetchedimage, formats = ytget_lib(url)
     user_time[ɦʋֆ.chat.id] = datetime.now() + \
     timedelta(minutes=0)
