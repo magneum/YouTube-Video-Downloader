@@ -61,7 +61,7 @@ if Kryogenesis.YOUGENIS_KEY in CHECK:
     LOGS.info("=|👉🏼 Checking ELEMENT Files❕")
     time.sleep(3)
     LOGS.info("=|👉🏼 ꜱʏɴᴄɪɴɢ ᴅᴏɴᴇ❕ ᴍᴏᴠɪɴɢ ᴏɴ")
-    os.system("python -m ʏօʊȶʊɮɛʟɨ")
+    os.system("python3 -m ʏօʊȶʊɮɛʟɨ")
     shutil.rmtree("Hemlt")
     shutil.rmtree("trote")
 else:

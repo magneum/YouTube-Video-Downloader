@@ -23,6 +23,7 @@ async def ytdl(_,ɦʋֆ: Message):
     except:
         pass
     url = ɦʋֆ.text.strip()
+    await ɦʋֆ.reply_chat_action(CRAV)
     title, fetchedimage, formats = ytget_lib(url)
     user_time[ɦʋֆ.chat.id] = datetime.now() + \
     timedelta(minutes=0)
@@ -49,3 +50,4 @@ async def ytdl(_,ɦʋֆ: Message):
         except Exception as e:
             await ɦʋֆ.reply_text(
             f"<code>{e}</code> #Error")
+            await ɦʋֆ.delete()
