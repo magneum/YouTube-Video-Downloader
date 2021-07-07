@@ -22,11 +22,7 @@ Dҽʋ Mҽɳƚισɳ:
 🛡 @HYPEVOIDSOUL 
 🍟===『🍗 ʏօʊȶʊɮɛʟɨ 🍰』==🍟
 """
-YYEX = YOUTUBE_REGEX_SITES = (
-    r"^((?:https?:)?\/\/)"
-    r"?((?:www|m)\.)"
-    r"?((?:|youtube\.com|youtu\.be|))"
-    r"(\/)([-a-zA-Z0-9()@:%_\+.~#?&//=]*)([\w\-]+)(\S+)?$")
+YTGENX = r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$"
 user_time = {}
 PL = "playing"
 PDV ="""

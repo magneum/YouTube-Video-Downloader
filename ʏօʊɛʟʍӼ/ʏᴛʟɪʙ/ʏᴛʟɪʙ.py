@@ -9,10 +9,12 @@ from pyrogram import Client, filters
 from datetime import datetime, timedelta
 
 @Client.on_message(
-filters.regex(YYEX))
+filters.regex(
+YTGENX))
 async def ytdl(_,ɦʋֆ: Message):
     url = ɦʋֆ.text.strip()
     await ɦʋֆ.reply_chat_action(CRAV)
+    await ɦʋֆ.delete()
     title, fetchedimage, formats = ytget_lib(url)
     user_time[ɦʋֆ.chat.id] = datetime.now() + \
     timedelta(minutes=0)
@@ -31,11 +33,12 @@ async def ytdl(_,ɦʋֆ: Message):
     except Exception as e:
         print(e)
         try:
-            fetchedimage = youliurl
+            nonimg = "https://telegra.ph/file/309fa4e4bdae98dd658c1.jpg"
             await ɦʋֆ.reply_photo(
-                fetchedimage,
+                nonimg,
                 caption=title,
                 reply_markup=pod)
         except Exception as e:
             await ɦʋֆ.reply_text(
             f"<code>{e}</code> #Error")
+            await ɦʋֆ.delete()
