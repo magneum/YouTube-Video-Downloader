@@ -26,11 +26,7 @@ YYEX = YOUTUBE_REGEX_SITES = (
     r"^((?:https?:)?\/\/)"
     r"?((?:www|m)\.)"
     r"?((?:|youtube\.com|youtu\.be|))"
-    r"(\/)([-a-zA-Z0-9()@:%_\+.~#?&//=]*)([\w\-]+)(\S+)?$"
-)
-DONOYT =  REGEX_EXCLUDE_URL = (
-    r"\/channel\/|\/playlist\?list=|&list=|\/sets\/"
-)
+    r"(\/)([-a-zA-Z0-9()@:%_\+.~#?&//=]*)([\w\-]+)(\S+)?$")
 user_time = {}
 PL = "playing"
 PDV ="""
