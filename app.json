@@ -1,5 +1,5 @@
 {
-    "name": "『🍗 ʏօʊȶʊɮɛʟɨ 🍰』|| Y̅O̅U̅G̅E̅N̅I̅S̅",
+    "name": "『🍗 ʏօʊȶʊɮɛʟɨ 🍰』|| YօʊɛʟʍӼ",
     "description": "Download any Youtube Audio/Video at full quality",
     "repository": "https://github.com/HypeVoidSoul/YouTube-Downloader.git",
     "logo": "https://telegra.ph/file/309fa4e4bdae98dd658c1.jpg",
@@ -37,10 +37,10 @@
         "required":
         true
         },
-        "YOUGENIS_KEY": 
+        "YOUELMX": 
         {
         "description":
-        "Put your Y̅O̅U̅G̅E̅N̅I̅S̅_KEY from @kryli_bot",
+        "Put your 𝗬𝗢𝗨𝗘𝗟𝗠𝗫_𝗞𝗘𝗬 from @kryli_bot",
         "required":
         true
         }

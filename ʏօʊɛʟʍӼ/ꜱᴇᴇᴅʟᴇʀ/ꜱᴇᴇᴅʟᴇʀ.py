@@ -1,7 +1,7 @@
 from Cula import *
 from ʏօʊȶʊɮɛʟɨ import *
 from ʏօʊɛʟʍӼ.ꜱʏɴᴏ import *
-from ʏȶɮʟɨ import *
+from UIYTRQAMCYTWADDALPPOWFVMAS import *
 from ɴᴜᴋᴏʟᴀ import *
 
 

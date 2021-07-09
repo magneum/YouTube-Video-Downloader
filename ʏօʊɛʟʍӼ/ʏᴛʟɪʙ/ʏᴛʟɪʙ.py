@@ -1,4 +1,4 @@
-from ʏȶɮʟɨ import *
+from UIYTRQAMCYTWADDALPPOWFVMAS import *
 from ɴᴜᴋᴏʟᴀ import *
 from ʏօʊȶʊɮɛʟɨ import *
 from Cula import *

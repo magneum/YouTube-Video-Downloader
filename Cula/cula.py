@@ -46,5 +46,8 @@ from pyrogram import (
     idle
     )
 import os
+import shutil
+import sys
+TK="knite"
 import wget
 from PIL import Image

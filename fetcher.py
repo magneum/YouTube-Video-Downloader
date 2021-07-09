@@ -1,2 +1,2 @@
 import os 
-os.system("python3 -m ʏօʊȶʊɮɛʟɨ")
+os.system("python -m IkkY")
