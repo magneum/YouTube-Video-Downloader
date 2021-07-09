@@ -1,18 +1,8 @@
-import os
-from PIL import Image
+from Cula import *
 from ʏօʊȶʊɮɛʟɨ import *
 from ʏօʊɛʟʍӼ.ꜱʏɴᴏ import *
 from ʏȶɮʟɨ import *
 from ɴᴜᴋᴏʟᴀ import *
-from hachoir.parser import createParser
-from hachoir.metadata import extractMetadata
-from pyrogram import Client as ɦֆ, ContinuePropagation
-from pyrogram.types import (
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    InputMediaVideo,
-    InputMediaAudio,
-    )
 
 
 @ɦֆ.on_callback_query()

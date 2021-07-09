@@ -1,12 +1,7 @@
-import os
-import wget
 from ʏȶɮʟɨ import *
 from ɴᴜᴋᴏʟᴀ import *
-from PIL import Image
 from ʏօʊȶʊɮɛʟɨ import *
-from pyrogram.types import InlineKeyboardMarkup, Message
-from pyrogram import Client, filters
-from datetime import datetime, timedelta
+from Cula import *
 
 @Client.on_message(
 filters.regex(

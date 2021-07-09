@@ -1,4 +1,4 @@
-import os
+from Cula import *
 class Kryogenesis(object):
     #YOUGENIS_KEY = os.environ.get("YOUGENIS_KEY")
     # TOKEN = os.environ.get("TOKEN")

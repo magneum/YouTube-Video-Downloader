@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-import asyncio
+from Cula import *
 
 async def videoseeder(command_to_exec):
     process = await asyncio.create_subprocess_exec(

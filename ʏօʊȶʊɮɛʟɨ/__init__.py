@@ -1,12 +1,4 @@
-from logging import INFO, basicConfig, getLogger
-basicConfig(
-format="%(levelname)s - %(message)s",
-level=INFO)
-LOGS = getLogger(__name__)
-from pyrogram import (
-    Client as ɦֆʋ,
-    idle
-    )
+from Cula import *
 from ʟaʄɨօ import *
 
 plugins = dict(

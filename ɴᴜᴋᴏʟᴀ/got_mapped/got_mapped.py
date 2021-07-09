@@ -1,7 +1,5 @@
 from ᴠʏᴛᴇꜱᴠɪʟᴇ import *
-from pyrogram.types import (
-    InlineKeyboardButton,
-    )
+from Cula import *
 
 
 def got_mapped(fetchedfiles):

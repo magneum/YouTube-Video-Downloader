@@ -1,10 +1,5 @@
+from Cula import *
 
-from pyrogram import Client as ɦֆ, filters, StopPropagation
-from pyrogram.types import (
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    Message
-    )
 @ɦֆ.on_message(
     filters.private
     &filters.command(

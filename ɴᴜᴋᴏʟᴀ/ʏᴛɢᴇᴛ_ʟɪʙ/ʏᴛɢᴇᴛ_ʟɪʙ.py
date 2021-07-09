@@ -1,5 +1,4 @@
-import youtube_dl
-ydl = youtube_dl.YoutubeDL()
+from Cula import *
 
 def ytget_lib(yturl):
     with ydl:

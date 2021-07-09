@@ -1,8 +1,4 @@
-import os
-from pyrogram.types import (
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    )
+from Cula import *
 
 async def send_file(c, q, med, item_id):
     print(med)
