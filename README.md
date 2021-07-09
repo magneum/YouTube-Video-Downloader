@@ -26,10 +26,6 @@
 
 - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/HypeVoidSoul/YouTube-Downloader.git/tree/VOID) 𝘌𝘯𝘢𝘣𝘭𝘦 𝘵𝘩𝘦 𝘥𝘺𝘯𝘰 𝘪𝘯 𝘩𝘦𝘳𝘰𝘬𝘶 𝘪𝘧 𝘶 𝘥𝘦𝘱𝘭𝘰𝘺𝘦𝘥 𝘶𝘳 𝘣𝘰𝘵 𝘪𝘯 𝘏𝘦𝘳𝘰𝘬𝘶
 
-
-- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mentiontard/tele-yt-dl.git/tree/main) 
-
-
 ## 📜 LICΣПSΣ
 - 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝘪𝘴 𝘭𝘪𝘤𝘦𝘯𝘴𝘦𝘥 𝘶𝘯𝘥𝘦𝘳 𝘵𝘩𝘦 𝘎𝘕𝘜 𝘎𝘦𝘯𝘦𝘳𝘢𝘭 𝘗𝘶𝘣𝘭𝘪𝘤 𝘓𝘪𝘤𝘦𝘯𝘴𝘦 𝘷3.0[GNU V3.0](LICENSE)
 ```sh
