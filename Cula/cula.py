@@ -6,7 +6,7 @@ import asyncio
 import youtube_dl
 ydl = youtube_dl.YoutubeDL()
 from pyrogram import (
-    Client as ɦֆ,
+    Client,
     filters,
     StopPropagation
 )
@@ -42,7 +42,7 @@ format="%(levelname)s - %(message)s",
 level=INFO)
 LOGS = getLogger(__name__)
 from pyrogram import (
-    Client as ɦֆʋ,
+    Client,
     idle
     )
 import os
