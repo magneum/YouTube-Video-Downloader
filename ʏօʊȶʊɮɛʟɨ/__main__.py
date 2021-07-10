@@ -1,5 +1,5 @@
 from . import *
-ɦʋֆ.start()
+Client.start()
 idle()
 try:
     shutil.rmtree(K)
@@ -9,4 +9,4 @@ try:
     shutil.rmtree(M)
 except:
     pass
-ɦʋֆ.stop()
+Client.stop()
