@@ -65,11 +65,11 @@ else:
     LOGS.info("=|- ❗️ 𝐄𝐗𝐈𝐓𝐈𝐍𝐆 𝐀𝐍𝐃 𝐂𝐋𝐄𝐀𝐍𝐈𝐍𝐆 𝐄𝐍𝐓𝐈𝐑𝐄 𝐒𝐎𝐔𝐑𝐂𝐄-𝐂𝐎𝐃𝐄 ❗️")
     time.sleep(2)
     try:
-    shutil.rmtree(K)
-    shutil.rmtree(P)
-    shutil.rmtree(V)
-    shutil.rmtree(Y)
-    shutil.rmtree(M)
+        shutil.rmtree(K)
+        shutil.rmtree(P)
+        shutil.rmtree(V)
+        shutil.rmtree(Y)
+        shutil.rmtree(M)
     except:
         LOGS.info("𝙈𝙖𝙣𝙪𝙖𝙡 𝙀𝙧𝙖𝙨𝙚 𝙤𝙧 𝙘𝙤𝙣𝙩𝙖𝙘𝙩 @HypeVoids or @HypeVoidSoul") 
         pass
