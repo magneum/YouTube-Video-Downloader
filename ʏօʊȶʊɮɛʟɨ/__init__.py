@@ -8,7 +8,7 @@ TOKEN = Kryogenesis.TOKEN
 APP_ID = Kryogenesis.APP_ID
 API_HASH = Kryogenesis.API_HASH
 
-ɦʋֆ = ɦֆʋ(
+Client(
     session_name="ɦʋֆ",
     bot_token=TOKEN,
     api_id=APP_ID,
