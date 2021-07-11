@@ -6,7 +6,7 @@
 <img align="centre" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/>
 
 
-## ❓ WΉY MΛDΣ ƬΉIS BӨƬ?    |ｏｏｏｏｏｏｏｏｏｏｏｏｏｏｏ|
+## ❓ WΉY MΛDΣ ƬΉIS BӨƬ?    💰------------------------|
 ```sh
 —(••÷[📸𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿🎙]÷••—
 
@@ -20,12 +20,12 @@
 - [![Generic badge](https://img.shields.io/badge/𝙷𝚢𝚙𝚎𝚅𝚘𝚒𝚍𝙱𝚘𝚝-Vïå_ßð†-orange.svg)](https://t.me/HypeVoidBot) 𝘛𝘶𝘳𝘯 𝘰𝘯 𝘣𝘰𝘵 𝘪𝘯 𝘵𝘦𝘭𝘦𝘨𝘳𝘢𝘮 𝘢𝘯𝘥 𝘵𝘺𝘱𝘦 /us
 
 
-## 💠 DΣPLӨY    |ｏｏｏｏｏｏｏｏｏｏｏｏｏｏｏ|
+## 💠 DΣPLӨY    💰------------------------|
 - ꜰɪʀꜱᴛ ꜰᴏʀᴋ ᴀɴᴅ ꜱᴛᴀʀ ᴛʜᴇ ʀᴇᴘᴏ ᴀɴᴅ ᴛʜᴇɴ ᴄʜᴀɴɢᴇ [app.bot](app.bot) ᴛᴏ app.json
 
 - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/HypeVoidSoul/YouTube-Downloader.git/tree/VOID) 𝘌𝘯𝘢𝘣𝘭𝘦 𝘵𝘩𝘦 𝘥𝘺𝘯𝘰 𝘪𝘯 𝘩𝘦𝘳𝘰𝘬𝘶 𝘪𝘧 𝘶 𝘥𝘦𝘱𝘭𝘰𝘺𝘦𝘥 𝘶𝘳 𝘣𝘰𝘵 𝘪𝘯 𝘏𝘦𝘳𝘰𝘬𝘶
 
-## 📜 LICΣПSΣ    |ｏｏｏｏｏｏｏｏｏｏｏｏｏｏｏ|
+## 📜 LICΣПSΣ    💰------------------------|
 - 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝘪𝘴 𝘭𝘪𝘤𝘦𝘯𝘴𝘦𝘥 𝘶𝘯𝘥𝘦𝘳 𝘵𝘩𝘦 𝘎𝘕𝘜 𝘎𝘦𝘯𝘦𝘳𝘢𝘭 𝘗𝘶𝘣𝘭𝘪𝘤 𝘓𝘪𝘤𝘦𝘯𝘴𝘦 𝘷3.0[GNU V3.0](LICENSE)
 
 🔥 ΉYPΣ VӨID LΛB 🔥__Wê Ärê H¥þêVðïÐ§__🔥 ΉYPΣ VӨID LΛB 🔥
