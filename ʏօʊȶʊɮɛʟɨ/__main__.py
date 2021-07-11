@@ -1,4 +1,4 @@
-from pyrogram.methods.utilities import idle
+from pyrogram import Client,idle
 from Cula import *
 from ʟaʄɨօ import *
 
