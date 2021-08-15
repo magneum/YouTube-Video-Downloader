@@ -6,7 +6,7 @@ from ɴᴜᴋᴏʟᴀ import *
 
 
 @ɦֆ.on_callback_query()
-def catch_youtube_fmtid(_,mtp):
+async def catch_youtube_fmtid(_,mtp):
     feeder_infos = mtp.data
     if feeder_infos.startswith("ytdata||"):
         yturl = feeder_infos.split("||")[-1]
@@ -16,12 +16,12 @@ def catch_youtube_fmtid(_,mtp):
             buttons = InlineKeyboardMarkup([[InlineKeyboardButton(GTA,callback_data=f"{media_type}||{format_id}||{yturl}"),]])
         else:
             buttons = InlineKeyboardMarkup([[InlineKeyboardButton(GTV,callback_data=f"{media_type}||{format_id}||{yturl}")]])
-        mtp.edit_message_reply_markup(buttons)
+        await mtp.edit_message_reply_markup(buttons)
     else:
         raise ContinuePropagation
 
 @ɦֆ.on_callback_query()
-def catch_youtube_dldata(
+async def catch_youtube_dldata(
     c,
     q):
     feeder_infos = q.data.strip()
@@ -62,7 +62,7 @@ def catch_youtube_dldata(
     userdir = os.path.join(os.getcwd(), DLD, str(q.message.chat.id))
     if not os.path.isdir(userdir):
         os.makedirs(userdir)
-    q.edit_message_reply_markup(
+    await q.edit_message_reply_markup(
         InlineKeyboardMarkup([[InlineKeyboardButton(A1,
         callback_data=DN)]]))
     filepath = os.path.join(
@@ -72,7 +72,7 @@ def catch_youtube_dldata(
     videoseeder_type = [YD,"-c",ES,"-f",f"{format_id}+bestaudio","-o",filepath,HPF,yturl,]
     if feeder_infos.startswith(
         AD):
-        item_id = audioseeder(
+        item_id = await audioseeder(
             audioseeder_type)
         med = InputMediaAudio(
             media=item_id,
@@ -82,7 +82,7 @@ def catch_youtube_dldata(
         )
     if feeder_infos.startswith(
         VD):
-        item_id = videoseeder(
+        item_id = await videoseeder(
             videoseeder_type)
         med = InputMediaVideo(
             media=item_id,
