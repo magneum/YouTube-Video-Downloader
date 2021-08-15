@@ -3,7 +3,7 @@ from Cula import *
 @ɦֆ.on_message(filters.command(
     "help",
     prefixes='/')) 
-async def help(_,ɦʋֆ: Message):
+def help(_,ɦʋֆ: Message):
     usrs = ɦʋֆ.from_user.first_name
     MORETITE = f"""
 🍟==========『🍗 ʏօʊȶʊɮɛʟɨ 🍰』==========🍟
@@ -22,7 +22,7 @@ Dҽʋ Mҽɳƚισɳ: @HypeVoidBot
 🍟==========『🍗 ʏօʊȶʊɮɛʟɨ 🍰』==========🍟
 """
        
-    await ɦʋֆ.reply_photo(
+    ɦʋֆ.reply_photo(
         "https://telegra.ph/file/309fa4e4bdae98dd658c1.jpg",
         caption=MORETITE)
     raise StopPropagation
