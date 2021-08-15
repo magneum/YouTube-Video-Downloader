@@ -31,7 +31,7 @@
 ## 💠 DΣPLӨY  
 - ꜰɪʀꜱᴛ ꜰᴏʀᴋ ᴀɴᴅ ꜱᴛᴀʀ ᴛʜᴇ ʀᴇᴘᴏ ᴀɴᴅ ᴛʜᴇɴ ᴄʜᴀɴɢᴇ [app.bot](app.bot) ᴛᴏ app.json
 
-# NO MORE SUPPORTED SORRY!! ... 'DOWNLOAD CODE AND NEVER FORK'.. SO BYE BYE !
+# NO MORE SUPPORTED SORRY!! ... 'DOWNLOAD CODE AND NEVER FORK' is what ppl do.. SO BYE BYE !
 - [![Deploy](https://www.herokucdn.com/deploy/button.svg)]
 
 
