@@ -112,15 +112,9 @@ try:
             def GOT_MAPPED(fetchedfiles):
                 resolution = fetchedfiles['format']
                 if "audio" in resolution:
-                    return [
-                    HypeKeyboardButton(
-                    f"🎧{resolution}{HYPE_HUMANIZER(fetchedfiles['filesize'])}",
-                    callback_data=f"ytdata||audio||{fetchedfiles['format_id']}||{fetchedfiles['yturl']}")]
+                    return [HypeKeyboardButton(f"🎧{resolution}{HYPE_HUMANIZER(fetchedfiles['filesize'])}",callback_data=f"ytdata||audio||{fetchedfiles['format_id']}||{fetchedfiles['yturl']}")]
                 else:
-                    return [
-                    HypeKeyboardButton(
-                    f"🎬{resolution}{HYPE_HUMANIZER(fetchedfiles['filesize'])}",
-                    callback_data=f"ytdata||video||{fetchedfiles['format_id']}||{fetchedfiles['yturl']}")]
+                    return [HypeKeyboardButton(f"🎬{resolution}{HYPE_HUMANIZER(fetchedfiles['filesize'])}",callback_data=f"ytdata||video||{fetchedfiles['format_id']}||{fetchedfiles['yturl']}")]
         except Exception as ʏօʊȶʊɮɛʟɨ:
             print(ʏօʊȶʊɮɛʟɨ)
         """🔻==================================================================•🔺ʏօʊȶʊɮɛʟɨ🔻•============================================================🔺
@@ -339,9 +333,9 @@ try:
 
 
                     if media_type == 'audio':
-                        buttons = HypeKeyboardMarkup([[HypeKeyboardButton("🎤 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 🎤",callback_data=f"{media_type}||{format_id}||{yturl}"),]])
+                        buttons = HypeKeyboardMarkup([[HypeKeyboardButton("🎤 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙",callback_data=f"{media_type}||{format_id}||{yturl}"),]])
                     else:
-                        buttons = HypeKeyboardMarkup([[HypeKeyboardButton("📺 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 📺",callback_data=f"{media_type}||{format_id}||{yturl}")]])
+                        buttons = HypeKeyboardMarkup([[HypeKeyboardButton("📺 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙",callback_data=f"{media_type}||{format_id}||{yturl}")]])
                     await mtp.edit_message_reply_markup(buttons)
 
 
