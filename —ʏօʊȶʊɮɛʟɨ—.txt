@@ -7,3 +7,7 @@ pillow
 hachoir
 beautifulsoup4
 soupsieve
+pyAesCrypt
+loguru
+termcolor
+python-dotenv
