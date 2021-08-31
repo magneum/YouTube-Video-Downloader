@@ -167,7 +167,7 @@ try:
                                                             has been licensed under GNU General Public License
                                                         𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀  
         🔺====================================================================•🔺ʏօʊȶʊɮɛʟɨ🔻•=============================================================🔻"""
-        try:
+        try: 
             async def AUDIO_SEEDER(command_to_exec):
                 process = await asyncio.create_subprocess_exec(
                     *command_to_exec,
@@ -257,7 +257,7 @@ try:
             async def help(_,ʏօ_ɦʋֆ: Message):
                 usrs = ʏօ_ɦʋֆ.from_user.first_name      
                 await ʏօ_ɦʋֆ.reply_photo(
-                    "https://telegra.ph/file/309fa4e4bdae98dd658c1.jpg",
+                    "https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
                     caption=f"""
         🍟==========『🍗 ʏօʊȶʊɮɛʟɨ 🍰』==========🍟
         🎈Dear <b>**{usrs}**</b>
@@ -296,7 +296,7 @@ try:
             async def start(_,ʏօ_ɦʋֆ: Message):
                 usrs = ʏօ_ɦʋֆ.from_user.first_name
                 await ʏօ_ɦʋֆ.reply_photo(
-                    "https://telegra.ph/file/309fa4e4bdae98dd658c1.jpg",
+                    "https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
                     caption=f"""
         🍟==========『🍗 ʏօʊȶʊɮɛʟɨ 🍰』==========🍟
 
@@ -594,7 +594,7 @@ try:
                     print(ʏօʊȶʊɮɛʟɨ)
                     try:
                         await ʏօ_ɦʋֆ.reply_photo(
-                        photo="https://telegra.ph/file/309fa4e4bdae98dd658c1.jpg",
+                        photo="https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
                         caption=title,
                         reply_markup=HypeKeyboardMarkup(list(RESOLUTION_MAKER(formats))))
 
