@@ -1,7 +1,7 @@
 [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)<img align="centre" src="https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg" alt="HypeVoidSoul"/>
 <img align="centre" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/>
 # ⭐️『 •🔺ʏօʊȶʊɮɛʟɨ🔻• 』⭐
-<p align="centre"><img  width="60%" height="100%" img src="https://telegra.ph/file/309fa4e4bdae98dd658c1.jpg" /></p>
+<p align="centre"><img  width="80%" height="100%" img src="https://telegra.ph/file/afbe2788479c6d7a30678.jpg" /></p>
 
 
 
