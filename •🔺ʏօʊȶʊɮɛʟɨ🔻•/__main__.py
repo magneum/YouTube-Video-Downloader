@@ -259,7 +259,7 @@ try:
                 await ʏօ_ɦʋֆ.reply_photo(
                     "https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
                     caption=f"""
-        🍟==========『🍗 ʏօʊȶʊɮɛʟɨ 🍰』==========🍟
+=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======
         🎈Dear <b>**{usrs}**</b>
 
         Using `YouTube Audio/Video Downloader` bot is very simple.
@@ -271,8 +271,10 @@ try:
         - Wait till it gets downloaded and repeat untill ur appetite is satisfied.
 
 
-        Dҽʋ Mҽɳƚισɳ: @HypeVoidBot
-        🍟==========『🍗 ʏօʊȶʊɮɛʟɨ 🍰』==========🍟
+    Dҽʋ Mҽɳƚισɳ:
+        🛡 @hypevoidlab 
+        🛡 @hypevoidbot
+=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======
         """)
                 raise StopPropagation
         except Exception as ʏօʊȶʊɮɛʟɨ:
@@ -298,13 +300,16 @@ try:
                 await ʏօ_ɦʋֆ.reply_photo(
                     "https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
                     caption=f"""
-        🍟==========『🍗 ʏօʊȶʊɮɛʟɨ 🍰』==========🍟
+=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======
 
         🎈Dear,
         Sir,Ma'am  <b>{usrs}</b>
         Use the below button or type /help for More info.
 
-        🍟==========『🍗 ʏօʊȶʊɮɛʟɨ 🍰』==========🍟
+    Dҽʋ Mҽɳƚισɳ:
+        🛡 @hypevoidlab 
+        🛡 @hypevoidbot
+=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======
         """,
                     reply_markup=HypeKeyboardMarkup([
                     [HypeKeyboardButton("🍺 Grðµþ:",url="https://t.me/hypevoids")],
@@ -358,11 +363,11 @@ try:
                 feeder_infos = quoter.data.strip()
                 yturl = feeder_infos.split("||")[-1]
                 format_id = feeder_infos.split("||")[-2]
-                jpeg_fetched = HypeDir + str(quoter.message.chat.id) + ".jpg"
-                if hype.path.exists(jpeg_fetched):
+                JPG_FETCHED = HypeDir + str(quoter.message.chat.id) + ".jpg"
+                if hype.path.exists(JPG_FETCHED):
                     width = 0
                     height = 0
-                    metadata = extractMetadata(createParser(jpeg_fetched))
+                    metadata = extractMetadata(createParser(JPG_FETCHED))
                     if metadata.has(
                         "width"):
                         width = metadata.get(
@@ -372,7 +377,7 @@ try:
                         height = metadata.get(
                         "height")
                     img = Image.open(
-                        jpeg_fetched)
+                        JPG_FETCHED)
                     if feeder_infos.startswith((
                         "audio",)):
                         img.resize((
@@ -382,7 +387,7 @@ try:
                         img.resize((
                         1080,
                         height))
-                    img.save(jpeg_fetched,
+                    img.save(JPG_FETCHED,
                         "JPEG")
                 if not feeder_infos.startswith((
                         "video",
@@ -392,8 +397,8 @@ try:
                 userdir = hype.path.join(hype.getcwd(),HypeDir,str(quoter.message.chat.id))
                 if not hype.path.isdir(userdir):
                     hype.makedirs(userdir)
-                await quoter.edit_message_reply_markup(HypeKeyboardMarkup([[HypeKeyboardButton("🏷ᴡᴀɪᴛ ᴛɪᴍᴇ ᴅᴇᴘᴇɴᴅꜱ ᴏɴ ꜱɪᴢᴇ ᴏꜰ ᴍᴇᴅɪᴀ",callback_data="down")]]))
-                filepath = hype.path.join(
+                await quoter.edit_message_reply_markup(HypeKeyboardMarkup([[HypeKeyboardButton("⏳𝘞𝘢𝘪𝘵 𝘵𝘪𝘮𝘦 𝘥𝘦𝘱𝘦𝘯𝘥𝘴 𝘰𝘯 𝘮𝘦𝘥𝘪𝘢 𝘴𝘪𝘻𝘦",callback_data="down")]]))
+                FILE_OS = hype.path.join(
                 userdir,
                 filext)
                 audioseeder_type = [
@@ -406,7 +411,8 @@ try:
                 "--audio-quality",
                 format_id,
                 "-o",
-                filepath,yturl
+                FILE_OS,
+                yturl
                 ]
                 videoseeder_type = [
                 "youtube-dl",
@@ -415,49 +421,49 @@ try:
                 "-f",
                 f"{format_id}+bestaudio",
                 "-o",
-                filepath,
+                FILE_OS,
                 "--hls-prefer-ffmpeg",
                 yturl
                 ]
                 if feeder_infos.startswith("audio"):
                     item_id = await AUDIO_SEEDER(
                         audioseeder_type)
+                    title=hype.path.basename(item_id)    
                     media = InputMediaAudio(
                         media=item_id,
-                        thumb=jpeg_fetched,
-                        caption="""
-        🍟===『🍗 ʏօʊȶʊɮɛʟɨ 🍰』==🍟
-        ꜰɪʟᴇ ɴᴀᴍᴇ:☝🏻
-        ꜰɪʟᴇ ᴛʏᴘᴇ: 🎧.Audio
-        -----
-        ʙʀᴏᴜɢʜᴛ ʙʏ: @hvyoutubebot
-        ᴄʜᴀɴɴᴇʟ: @hypevoidlab
-        ɢʀᴏᴜᴘ: @hypevoids
-        -----
-        Dҽʋ Mҽɳƚισɳ:
-        🛡 @HYPEVOIDSOUL""",
+                        thumb=JPG_FETCHED,
+                        caption=f"""
+=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======
+    ʙʀᴏᴜɢʜᴛ ʙʏ: @hvyoutubebot
+    Name: {title}
+
+
+    Dҽʋ Mҽɳƚισɳ:
+        🛡 @hypevoidlab 
+        🛡 @hypevoidbot
+=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======
+""",
                         title=hype.path.basename(item_id))
                 if feeder_infos.startswith("video"):
+                    title=hype.path.basename(item_id) 
                     item_id = await VIDEO_SEEDER(videoseeder_type)
                     media = InputMediaVideo(
                     media=item_id,
                     width=width,
                     height=height,
-                    thumb=jpeg_fetched,
-                    caption="""
-        🍟===『🍗 ʏօʊȶʊɮɛʟɨ 🍰』==🍟
-        ꜱᴛʀᴇᴀᴍ ᴠɪᴅᴇᴏ:☝🏻👀
-        ꜰɪʟᴇ ᴛʏᴘᴇ: 🎬video
-        -----
-        ʙʀᴏᴜɢʜᴛ ʙʏ: @hvyoutubebot
-        ᴄʜᴀɴɴᴇʟ: @hypevoidlab
-        ɢʀᴏᴜᴘ: @hypevoids
-        -----
-        Dҽʋ Mҽɳƚισɳ:
-        🛡 @HYPEVOIDSOUL 
-        """,
-                    supports_streaming=True
-                    )
+                    thumb=JPG_FETCHED,
+                    caption=f"""
+=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======
+    ʙʀᴏᴜɢʜᴛ ʙʏ: @hvyoutubebot
+    Name: {title}
+
+
+    Dҽʋ Mҽɳƚισɳ:
+        🛡 @hypevoidlab 
+        🛡 @hypevoidbot
+=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======
+""",
+                    supports_streaming=True)
                 loop = asyncio.get_event_loop()
                 if media:
                     loop.create_task(send_file(
@@ -465,25 +471,27 @@ try:
                     quoter,
                     media,
                     item_id))
+                    
                 else:
+                    ʏօ_ɦʋֆ = Message
                     await ʏօ_ɦʋֆ.reply_text(
                     "Media not found\nSorry !\nTry again or use other link.")
                     pass
-
+            """🔻==================================================================•🔺ʏօʊȶʊɮɛʟɨ🔻•============================================================🔺
+                                                                        GNU GENERAL PUBLIC LICENSE 
+                                                                        Version 3, 29 June 2007
+                                                                    Copyright (C) 2007 Free Software Foundation
+                                                            Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
+                                                                of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
+                                                                                •🔺ʏօʊȶʊɮɛʟɨ🔻• 
+                                                                has been licensed under GNU General Public License
+                                                            𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀  
+            🔺====================================================================•🔺ʏօʊȶʊɮɛʟɨ🔻•=============================================================🔻"""
             async def send_file(counter,quoter,media,item_id):
-                """🔻==================================================================•🔺ʏօʊȶʊɮɛʟɨ🔻•============================================================🔺
-                                                                            GNU GENERAL PUBLIC LICENSE 
-                                                                            Version 3, 29 June 2007
-                                                                        Copyright (C) 2007 Free Software Foundation
-                                                                Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
-                                                                    of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
-                                                                                    •🔺ʏօʊȶʊɮɛʟɨ🔻• 
-                                                                    has been licensed under GNU General Public License
-                                                                𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀  
-                🔺====================================================================•🔺ʏօʊȶʊɮɛʟɨ🔻•=============================================================🔻"""
                 try:
                     await quoter.edit_message_reply_markup(HypeKeyboardMarkup([
-                    [HypeKeyboardButton("Sending Item📤",callback_data="down")]]))
+                    [HypeKeyboardButton("Sending Item📤",
+                    callback_data="down")]]))
                     await counter.send_chat_action(
                     chat_id=quoter.message.chat.id,
                     action="record_video"
