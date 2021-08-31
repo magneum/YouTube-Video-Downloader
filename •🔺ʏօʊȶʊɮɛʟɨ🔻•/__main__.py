@@ -339,15 +339,9 @@ try:
 
 
                     if media_type == 'audio':
-                        buttons = HypeKeyboardMarkup([
-                                [HypeKeyboardButton("Download ᴀᴜᴅɪᴏ🎤",
-                                callback_data=f"{media_type}||{format_id}||{yturl}"),]])
-                    elif media_type == 'video':
-                        buttons = HypeKeyboardMarkup([
-                                [HypeKeyboardButton("Download ᴠɪᴅᴇᴏ🎨",
-                                callback_data=f"{media_type}||{format_id}||{yturl}")]])
+                        buttons = HypeKeyboardMarkup([[HypeKeyboardButton("🎤 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 🎤",callback_data=f"{media_type}||{format_id}||{yturl}"),]])
                     else:
-                        pass
+                        buttons = HypeKeyboardMarkup([[HypeKeyboardButton("📺 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 📺",callback_data=f"{media_type}||{format_id}||{yturl}")]])
                     await mtp.edit_message_reply_markup(buttons)
 
 
