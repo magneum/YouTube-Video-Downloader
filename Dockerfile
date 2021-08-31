@@ -32,7 +32,7 @@ RUN cd Norded
 # •🔺ʏօʊȶʊɮɛʟɨ🔻•  
 WORKDIR /Norded
 # •🔺ʏօʊȶʊɮɛʟɨ🔻•  
-RUN pip install -r 𝘠𝘰𝘶𝘛𝘶𝘣𝘦.txt
+RUN pip install -r YouTube.txt
 # •🔺ʏօʊȶʊɮɛʟɨ🔻•  
 CMD python3 -m •🔺ʏօʊȶʊɮɛʟɨ🔻•
 #     """
