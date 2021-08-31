@@ -20,19 +20,19 @@ RUN python -m venv $VIRTUAL_ENV
 # •🔺ʏօʊȶʊɮɛʟɨ🔻•  
 ENV PATH "$VIRTUAL_ENV/bin:$PATH"
 # •🔺ʏօʊȶʊɮɛʟɨ🔻•  
-RUN mkdir —••÷[🕊NORDED🕊]÷••—
+RUN mkdir —••÷[🔺ʏօʊȶʊɮɛʟɨ🔻•]÷••—
 # •🔺ʏօʊȶʊɮɛʟɨ🔻•  
 RUN apt update && apt upgrade -y && apt install git -y && apt install python3 -y && apt install python3-pip -y && apt install -y ffmpeg opus-tools bpm-tools
 # •🔺ʏօʊȶʊɮɛʟɨ🔻•  
-RUN cd —••÷[🕊NORDED🕊]÷••—
+RUN cd —••÷[🔺ʏօʊȶʊɮɛʟɨ🔻•]÷••—
 # •🔺ʏօʊȶʊɮɛʟɨ🔻•  
-RUN git clone https://github.com/HypeVoidSoul/Norded.git
+RUN git clone https://github.com/HypeVoidSoul/YouTube-Downloader.git
 # •🔺ʏօʊȶʊɮɛʟɨ🔻•  
-RUN cd Norded
+RUN cd YouTube-Downloader
 # •🔺ʏօʊȶʊɮɛʟɨ🔻•  
-WORKDIR /Norded
+WORKDIR /YouTube-Downloader
 # •🔺ʏօʊȶʊɮɛʟɨ🔻•  
-RUN pip install -r YouTube.txt
+RUN pip install -r •ʏօʊȶʊɮɛʟɨ•.txt
 # •🔺ʏօʊȶʊɮɛʟɨ🔻•  
 CMD python3 -m •🔺ʏօʊȶʊɮɛʟɨ🔻•
 #     """
