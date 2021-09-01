@@ -66,13 +66,12 @@ try:
     from termcolor import *
     import pyAesCrypt as Hyper
     from zipfile import ZipFile
-    from youtube_search import YoutubeSearch
     from datetime import datetime, timedelta
     from pyrogram import Client,idle,filters,StopPropagation,ContinuePropagation
     from pyrogram.methods.messages.download_media import DEFAULT_DOWNLOAD_DIR as HypeDir
     from pyrogram.types import InlineKeyboardButton as HypeKeyboardButton, InlineKeyboardMarkup as HypeKeyboardMarkup,Message
 except Exception as ʏօʊȶʊɮɛʟɨ:
-    cprint(ʏօʊȶʊɮɛʟɨ, "red")
+    print(ʏօʊȶʊɮɛʟɨ)
     pass
 """
 🔻===========================================================[=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======]=====================================================🔺
@@ -165,7 +164,7 @@ try:
                     HV_YT.download([url])
                 return f"{title}"
         except Exception as ʏօʊȶʊɮɛʟɨ:
-            cprint(ʏօʊȶʊɮɛʟɨ, "red")
+            print(ʏօʊȶʊɮɛʟɨ)
             pass
     """
     🔻===========================================================[=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======]=====================================================🔺
@@ -250,7 +249,7 @@ try:
                 client.send_message(
                 message.chat.id,"Send The Valid Url Please")
         except Exception as ʏօʊȶʊɮɛʟɨ:
-            cprint(ʏօʊȶʊɮɛʟɨ, "red")
+            print(ʏօʊȶʊɮɛʟɨ)
             pass
 
     """
@@ -343,12 +342,12 @@ try:
                 [HypeKeyboardButton("🛡 ÇðÐêß¥",url="https://t.me/HypeVoidSoul")]]))
                 SENT.delete()
         except Exception as ʏօʊȶʊɮɛʟɨ:
-            cprint(ʏօʊȶʊɮɛʟɨ, "red")
+            print(ʏօʊȶʊɮɛʟɨ)
             pass
         try:
             shutil.rmtree("ʏօʊȶʊɮɛʟɨ")
         except Exception as ʏօʊȶʊɮɛʟɨ:
-            cprint(ʏօʊȶʊɮɛʟɨ, "red")
+            print(ʏօʊȶʊɮɛʟɨ)
             pass
         """
         🔻===========================================================[=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======]=====================================================🔺
@@ -693,7 +692,7 @@ Use the below button or type /help for More info.
     logger.info("Hmm!😋")
     ʏօʊȶʊɮɛʟɨ.stop()
 except Exception as ʏօʊȶʊɮɛʟɨ:
-    cprint(ʏօʊȶʊɮɛʟɨ, "red")
+    print(ʏօʊȶʊɮɛʟɨ)
     pass
 """
 🔻===========================================================[=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======]=====================================================🔺
