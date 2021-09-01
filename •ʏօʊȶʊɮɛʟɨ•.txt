@@ -12,3 +12,4 @@ pyAesCrypt
 loguru
 termcolor
 python-dotenv
+requests

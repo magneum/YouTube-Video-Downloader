@@ -18,12 +18,9 @@ try:
         os.system("clear")
     except Exception:
         pass
-    import sys
     import time
     import shutil
     import logging
-    import pyrogram
-    import tgcrypto
     import requests
     import validators
     import youtube_dl
