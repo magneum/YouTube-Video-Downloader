@@ -1,9 +1,10 @@
 TgCrypto
-git+https://github.com/ytdl-org/youtube-dl
+youtube-dl
 ffmpeg-python
 Pyrogram
 wget
 pillow
+wheel
 hachoir
 beautifulsoup4
 soupsieve
@@ -11,3 +12,4 @@ pyAesCrypt
 loguru
 termcolor
 python-dotenv
+https://youtu.be/hiu9WSl4OKg
