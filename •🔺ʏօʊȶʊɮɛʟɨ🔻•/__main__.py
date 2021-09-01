@@ -55,17 +55,17 @@ try:
     except ImportError:
         os.system("pip install pyAesCrypt")  
     try:
-        from dotenv import *
+        from dotenv import load_dotenv
     except ImportError:
         os.system("pip install python-dotenv")  
     import youtube_dl
     import time
     from loguru import *
-    from dotenv import *
     from os import getenv
     from termcolor import *
     import pyAesCrypt as Hyper
     from zipfile import ZipFile
+    from dotenv import load_dotenv
     from datetime import datetime, timedelta
     from pyrogram import Client,idle,filters,StopPropagation,ContinuePropagation
     from pyrogram.methods.messages.download_media import DEFAULT_DOWNLOAD_DIR as HypeDir
