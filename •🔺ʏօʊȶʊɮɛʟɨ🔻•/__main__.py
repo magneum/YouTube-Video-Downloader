@@ -116,7 +116,7 @@ HPCD = getenv("HEROKU", None)
 session_name="•🔺ʏօʊȶʊɮɛʟɨ🔻•",
 api_id=getenv("API_ID"),
 api_hash=getenv("API_HASH"),
-bot_token=getenv("TOKEN")) 
+bot_token=getenv("BOT_TOKEN")) 
 youtube_next_fetch = 1  
 users ={}
 user_time = {}
@@ -307,7 +307,7 @@ try:
                 path,
                 caption=f"""
 [=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======](https://t.me/hypevoidlab)             
-**ʙʀᴏᴜɢʜᴛ ʙʏ:** @HvYouTubeVideoBot
+**ʙʀᴏᴜɢʜᴛ ʙʏ:** @HvYouTubeBot
 
 **Dҽʋ Mҽɳƚισɳ:**
     🛡 @hypevoidlab 
@@ -327,7 +327,7 @@ try:
                 chat_id, path,
                 caption=f"""
 [=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======](https://t.me/hypevoidlab)             
-**ʙʀᴏᴜɢʜᴛ ʙʏ:** @HvYouTubeVideoBot
+**ʙʀᴏᴜɢʜᴛ ʙʏ:** @HvYouTubeBot
 
 
 **Dҽʋ Mҽɳƚισɳ:**
@@ -372,7 +372,7 @@ try:
             "https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
             caption=f"""
 [=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======](https://t.me/hypevoidlab)    
-**ʙʀᴏᴜɢʜᴛ ʙʏ:** @HvYouTubeVideoBot
+**ʙʀᴏᴜɢʜᴛ ʙʏ:** @HvYouTubeBot
 
 
 🎈Dear <b>**{usrs}**</b>
@@ -419,7 +419,7 @@ Just follow these points and you will be good to go.
             "https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
             caption=f"""
 [=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======](https://t.me/hypevoidlab)   
-**ʙʀᴏᴜɢʜᴛ ʙʏ:** @HvYouTubeVideoBot
+**ʙʀᴏᴜɢʜᴛ ʙʏ:** @HvYouTubeBot
 
 🎈Dear,
 Sir,Ma'am  <b>{usrs}</b>
