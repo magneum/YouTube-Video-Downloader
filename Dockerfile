@@ -16,7 +16,7 @@ RUN apt update && apt upgrade -y && apt install git -y && apt install python3 -y
 RUN git clone https://github.com/HypeVoidSoul/YouTube-Downloader.git
 RUN cd YouTube-Downloader
 WORKDIR /YouTube-Downloader
-RUN pip install -r YouTube.txt
+RUN pip install -r •ʏօʊȶʊɮɛʟɨ•.txt
 CMD python3 -m •🔺ʏօʊȶʊɮɛʟɨ🔻•
 # """🔻===========================================================[=======•🔺ʏօʊȶʊɮɛʟɨ🔻•=======]=====================================================🔺
 #                                                              GNU GENERAL PUBLIC LICENSE 

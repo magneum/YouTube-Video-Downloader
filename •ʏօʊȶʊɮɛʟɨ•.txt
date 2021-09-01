@@ -12,4 +12,3 @@ pyAesCrypt
 loguru
 termcolor
 python-dotenv
-https://youtu.be/hiu9WSl4OKg
