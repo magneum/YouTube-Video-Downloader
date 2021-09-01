@@ -19,48 +19,15 @@ try:
     except Exception:
         pass
     import sys
+    import time
     import shutil
     import logging
+    import pyrogram
+    import tgcrypto
     import requests
-    try:
-        from termcolor import *
-    except ImportError:
-        os.system("pip install termcolor")
-    try:
-        import validators
-    except ImportError:
-        os.system("pip install validators")
-    try:
-        import youtube_dl
-    except ImportError:
-        os.system("pip install youtube_dl")
-    try:
-        from loguru import *
-    except ImportError:
-        os.system("pip install loguru")
-    from logging import *
-    try:
-        import pyrogram
-    except ImportError:
-        os.system("pip install pyrogram")
-    try:
-        import tgcrypto
-    except ImportError:
-        os.system("pip install tgcrypto")  
-    try:
-        from zipfile import ZipFile
-    except ImportError:
-        os.system("pip install tgcrypto")  
-    try:
-        import pyAesCrypt as Hyper
-    except ImportError:
-        os.system("pip install pyAesCrypt")  
-    try:
-        from dotenv import load_dotenv
-    except ImportError:
-        os.system("pip install python-dotenv")  
+    import validators
     import youtube_dl
-    import time
+    from logging import *
     from loguru import *
     from os import getenv
     from termcolor import *
