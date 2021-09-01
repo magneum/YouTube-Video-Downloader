@@ -13,3 +13,4 @@ loguru
 termcolor
 python-dotenv
 requests
+validators
