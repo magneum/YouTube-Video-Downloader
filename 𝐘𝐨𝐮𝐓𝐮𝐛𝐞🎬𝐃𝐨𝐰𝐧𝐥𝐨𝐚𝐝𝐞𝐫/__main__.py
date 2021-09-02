@@ -24,6 +24,7 @@ try:
     from dotenv import load_dotenv
     from youtube_dl import YoutubeDL
     from urllib.parse import urlparse
+    from datetime import datetime, timedelta
     from pyrogram import Client, filters, StopPropagation,idle
     from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton,Message
     """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
@@ -222,11 +223,44 @@ link and send you its music in mere seconds.
     async def just_get_message(_,ut: Message):
         await just_get_Message(ut)   
     async def just_get_Message(ut: Message):
+        youtube_next_fetch = 1
+        𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Clock = {}
+        𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Dl_Clock = 𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Clock.get(ut.chat.id)
+        try:
+            if 𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Dl_Clock > datetime.now():
+                𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Waiting = round((𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Dl_Clock - datetime.now()).total_seconds() / 60, 2)
+                await ut.reply_text(f"**Wait** `{𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Waiting * 60}`` **seconds before next Request**")
+                return
+        except:
+            pass
+        await ut.reply_chat_action("typing")
+        try:
+            now = ut.now()
+            𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Clock[ut.chat.id] = now + \
+                                        timedelta(minutes=youtube_next_fetch)
+
+        except Exception:
+            await ut.reply_text("`Failed To Fetch Youtube Data... 😔 \nPossible Youtube Blocked server ip \n#error`")
+            return
+
+
+
         await ut.reply_chat_action("playing")
         await ut.delete()
         try:
             Video_Hole = HV_YouTube_Video.extract_info(ut.text, download=True)
             if Video_Hole['duration'] > 1800:
+                await ut.reply_photo(
+        "https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
+        caption=f"""
+一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一
+||
+||
+⚠️  **Telegram Does not allow users to download media size bigger then 2000mb!**
+⚠️  **Please try less then 30min of Video...**
+||
+||
+一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一""")
                 return
             Master_Status_Dl = await ut.reply_text("🎬Fetching....",
             quote=True,
