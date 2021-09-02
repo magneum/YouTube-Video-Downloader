@@ -384,11 +384,11 @@ async def video_sender(𝐓𝐮𝐛𝐞: Message, Video_Hole, video_file):
     ✨🤩 𝙽𝚒𝚌𝚎 𝚌𝚑𝚘𝚒𝚌𝚎! 🤩✨ 
 🛒𝚈𝚘𝚞𝚛 𝙰𝚞𝚍𝚒𝚘 𝚏𝚒𝚕𝚎 𝚠𝚒𝚕𝚕 𝚋𝚎 𝚑𝚎𝚛𝚎 𝚜𝚑𝚘𝚛𝚝𝚕𝚢
 
-🏷**ᴛɪᴛʟᴇ:** `{title}`
-🎬**ꜱɪᴛᴇ:**[𝐘𝐨𝐮𝐓𝐮𝐛𝐞](https://youtube.com)
-💰**ᴘᴇʀꜰᴏʀᴍᴇʀ:**[{performer}](https://t.me/hypevoidlab)
-⌛️**ᴅᴜʀᴀᴛɪᴏɴ:**[{duration}s](https://t.me/hypevoidlab)
-📡**ʟɪɴᴋ:**__{webpage_url}__
+🏷**ᴛɪᴛʟᴇ:**  `{title}`
+🎬**ꜱɪᴛᴇ:**  [𝐘𝐨𝐮𝐓𝐮𝐛𝐞](https://youtube.com)
+💰**ᴘᴇʀꜰᴏʀᴍᴇʀ:**  [{performer}](https://t.me/hypevoidlab)
+⌛️**ᴅᴜʀᴀᴛɪᴏɴ:**  [{duration}s](https://t.me/hypevoidlab)
+📡**ʟɪɴᴋ:**  __{webpage_url}__
 """,
         parse_mode='markdown')
     await 𝐓𝐮𝐛𝐞.reply_video(
@@ -401,11 +401,11 @@ async def video_sender(𝐓𝐮𝐛𝐞: Message, Video_Hole, video_file):
         caption=f"""
 一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一
 
-🏷**ᴛɪᴛʟᴇ:** `{title}`
-🎬**ꜱɪᴛᴇ:**[𝐘𝐨𝐮𝐓𝐮𝐛𝐞](https://youtube.com)
-💰**ᴘᴇʀꜰᴏʀᴍᴇʀ:**[{performer}](https://t.me/hypevoidlab)
-⌛️**ᴅᴜʀᴀᴛɪᴏɴ:**[{duration}s](https://t.me/hypevoidlab)
-📡**ʟɪɴᴋ:**__{webpage_url}__
+🏷**ᴛɪᴛʟᴇ:**  `{title}`
+🎬**ꜱɪᴛᴇ:**  [𝐘𝐨𝐮𝐓𝐮𝐛𝐞](https://youtube.com)
+💰**ᴘᴇʀꜰᴏʀᴍᴇʀ:**  [{performer}](https://t.me/hypevoidlab)
+⌛️**ᴅᴜʀᴀᴛɪᴏɴ:**  [{duration}s](https://t.me/hypevoidlab)
+📡**ʟɪɴᴋ:**  __{webpage_url}__
 """,
         thumb=resized_thumb)
     await void.delete()
