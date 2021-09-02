@@ -1,0 +1,10 @@
+Pillow
+Pyrogram
+TgCrypto
+ffmpeg-python
+youtube-dl
+beautifulsoup4
+requests
+termcolor
+loguru
+pyaescrypt
