@@ -1,95 +1,105 @@
+
+"""=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
+                                                    GNU GENERAL PUBLIC LICENSE 
+                                                        Version 3, 29 June 2007
+                                                Copyright (C) 2007 Free Software Foundation
+                                            Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
+                                                of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
+                                                        ═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═ 
+                                            has been licensed under GNU General Public License
+                                        𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀
+====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
+import os
+import sys
+import time
+import shutil
+import ffmpeg
+import logging
+import asyncio
+from loguru import *
+from PIL import Image
+from os import getenv
+from termcolor import *
+import pyAesCrypt as Hyper
+from zipfile import ZipFile
+from dotenv import load_dotenv
+from youtube_dl import YoutubeDL
+from urllib.parse import urlparse
+from datetime import datetime, timedelta
+from pyrogram import Client, filters, StopPropagation,idle
+from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton,Message
+"""=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
+                                                    GNU GENERAL PUBLIC LICENSE 
+                                                        Version 3, 29 June 2007
+                                                Copyright (C) 2007 Free Software Foundation
+                                            Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
+                                                of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
+                                                        ═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═ 
+                                            has been licensed under GNU General Public License
+                                        𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀
+====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
+class InterceptHandler(logging.Handler):
+    LEVELS_MAP = {
+        logging.CRITICAL:
+        "CRITICAL",
+        logging.ERROR:
+        "ERROR",
+        logging.WARNING:
+        "WARNING",
+        logging.INFO:
+        "INFO",
+        logging.DEBUG:
+        "DEBUG"        }
+    def _get_level(
+        self,
+        record):
+        return self.LEVELS_MAP.get(
+        record.levelno,
+        record.levelno)
+    def emit(self, record):
+        logger_opt = logger.opt(
+        depth=6,
+        exception=record.exc_info,
+        ansi=True,
+        lazy=True)
+        logger_opt.log(self._get_level(record),
+        record.getMessage())
+logging.basicConfig(handlers=[InterceptHandler()],
+level=logging.INFO)
+LOGS = logging.getLogger(__name__)
+"""=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
+                                                    GNU GENERAL PUBLIC LICENSE 
+                                                        Version 3, 29 June 2007
+                                                Copyright (C) 2007 Free Software Foundation
+                                            Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
+                                                of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
+                                                        ═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═ 
+                                            has been licensed under GNU General Public License
+                                        𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀
+====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
+#load_dotenv("./𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫.env")
+BFS = 64 * 1024
+CODE = getenv("CODE", None)
+HPCD = getenv("HEROKU", None)
+HEROKU = getenv("HEROKU", None)
+if HEROKU == "HEROKU":
+    cprint = LOGS
+else:
+    cprint = cprint
+youtube_next_fetch = 1  
+users ={}
+user_time = {}
+"""=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
+                                                    GNU GENERAL PUBLIC LICENSE 
+                                                        Version 3, 29 June 2007
+                                                Copyright (C) 2007 Free Software Foundation
+                                            Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
+                                                of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
+                                                        ═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═ 
+                                            has been licensed under GNU General Public License
+                                        𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀
+====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
 try:
-    """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
-                                                        GNU GENERAL PUBLIC LICENSE 
-                                                            Version 3, 29 June 2007
-                                                    Copyright (C) 2007 Free Software Foundation
-                                                Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
-                                                    of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
-                                                            ═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═ 
-                                                has been licensed under GNU General Public License
-                                            𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀
-    ====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
-    import os
-    import sys
-    import shutil
-    import ffmpeg
-    import logging
-    import asyncio
-    from loguru import *
-    from PIL import Image
-    from os import getenv
-    from termcolor import *
-    import pyAesCrypt as Hyper
-    from zipfile import ZipFile
-    from dotenv import load_dotenv
-    from youtube_dl import YoutubeDL
-    from urllib.parse import urlparse
-    from datetime import datetime, timedelta
-    from pyrogram import Client, filters, StopPropagation,idle
-    from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton,Message
-    """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
-                                                        GNU GENERAL PUBLIC LICENSE 
-                                                            Version 3, 29 June 2007
-                                                    Copyright (C) 2007 Free Software Foundation
-                                                Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
-                                                    of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
-                                                            ═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═ 
-                                                has been licensed under GNU General Public License
-                                            𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀
-    ====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
-    class InterceptHandler(logging.Handler):
-        LEVELS_MAP = {
-            logging.CRITICAL:
-            "CRITICAL",
-            logging.ERROR:
-            "ERROR",
-            logging.WARNING:
-            "WARNING",
-            logging.INFO:
-            "INFO",
-            logging.DEBUG:
-            "DEBUG"        }
-        def _get_level(
-            self,
-            record):
-            return self.LEVELS_MAP.get(
-            record.levelno,
-            record.levelno)
-        def emit(self, record):
-            logger_opt = logger.opt(
-            depth=6,
-            exception=record.exc_info,
-            ansi=True,
-            lazy=True)
-            logger_opt.log(self._get_level(record),
-            record.getMessage())
-    logging.basicConfig(handlers=[InterceptHandler()],
-    level=logging.INFO)
-    LOGS = logging.getLogger(__name__)
-    """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
-                                                        GNU GENERAL PUBLIC LICENSE 
-                                                            Version 3, 29 June 2007
-                                                    Copyright (C) 2007 Free Software Foundation
-                                                Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
-                                                    of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
-                                                            ═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═ 
-                                                has been licensed under GNU General Public License
-                                            𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀
-    ====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
-    #load_dotenv("./𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫.env")
-    BFS = 64 * 1024
-    CODE = getenv("CODE", None)
-    HPCD = getenv("HEROKU", None)
-    """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
-                                                        GNU GENERAL PUBLIC LICENSE 
-                                                            Version 3, 29 June 2007
-                                                    Copyright (C) 2007 Free Software Foundation
-                                                Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
-                                                    of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
-                                                            ═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═ 
-                                                has been licensed under GNU General Public License
-                                            𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀
-    ====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
     𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜 = Client(workers=12,
     api_id=getenv("API_ID"),
     api_hash=getenv("API_HASH"),
@@ -223,23 +233,26 @@ link and send you its music in mere seconds.
     async def just_get_message(_,ut: Message):
         await just_get_Message(ut)   
     async def just_get_Message(ut: Message):
-        youtube_next_fetch = 1
-        𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Clock = {}
-        𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Dl_Clock = 𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Clock.get(ut.chat.id)
+        ut.reply_chat_action("typing")
+        ut.delete()
+        userLastDownloadTime = user_time.get(ut.chat.id)
         try:
-            if 𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Dl_Clock > datetime.now():
-                𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Waiting = round((𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Dl_Clock - datetime.now()).total_seconds() / 60, 2)
-                await ut.reply_text(f"**Wait** `{𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Waiting * 60}`` **seconds before next Request**")
+            if userLastDownloadTime > datetime.now():
+                ʏօʊȶʊɮɛʟɨ_clock = round((userLastDownloadTime - datetime.now()).total_seconds() / 60, 2)
+                TIME = ut.reply_text(f"**Wait `{ʏօʊȶʊɮɛʟɨ_clock * 60}` seconds before next Request**")
+                time.sleep(1)
+                TIME.delete()
                 return
         except:
             pass
-        await ut.reply_chat_action("typing")
+
         try:
-            now = ut.now()
-            𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Clock[ut.chat.id] = now + \
+            ut.delete()
+            now = datetime.now()
+            user_time[ut.chat.id] = now + \
                                         timedelta(minutes=youtube_next_fetch)
         except Exception:
-            await ut.reply_text("`Failed To Fetch Youtube Data... 😔 \nPossible Youtube Blocked server ip \n#error`")
+            ut.reply_text("`Error`")
             return
 
         await ut.reply_chat_action("playing")
