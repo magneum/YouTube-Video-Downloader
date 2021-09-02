@@ -1,9 +1,7 @@
 Pillow
 Pyrogram
 TgCrypto
-ffmpeg-python
-youtube-dl
-beautifulsoup4
+git+https://github.com/ytdl-org/youtube-dlbeautifulsoup4
 requests
 termcolor
 loguru
