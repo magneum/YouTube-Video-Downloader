@@ -38,45 +38,6 @@ from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton,Message
                                             has been licensed under GNU General Public License
                                         𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀
 ====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
-class InterceptHandler(logging.Handler):
-    LEVELS_MAP = {
-        logging.CRITICAL:
-        "CRITICAL",
-        logging.ERROR:
-        "ERROR",
-        logging.WARNING:
-        "WARNING",
-        logging.INFO:
-        "INFO",
-        logging.DEBUG:
-        "DEBUG"        }
-    def _get_level(
-        self,
-        record):
-        return self.LEVELS_MAP.get(
-        record.levelno,
-        record.levelno)
-    def emit(self, record):
-        logger_opt = logger.opt(
-        depth=6,
-        exception=record.exc_info,
-        ansi=True,
-        lazy=True)
-        logger_opt.log(self._get_level(record),
-        record.getMessage())
-logging.basicConfig(handlers=[InterceptHandler()],
-level=logging.INFO)
-LOGS = logging.getLogger(__name__)
-"""=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
-                                                    GNU GENERAL PUBLIC LICENSE 
-                                                        Version 3, 29 June 2007
-                                                Copyright (C) 2007 Free Software Foundation
-                                            Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
-                                                of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
-                                                        ═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═ 
-                                            has been licensed under GNU General Public License
-                                        𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀
-====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
 #load_dotenv("./𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫.env")
 BFS = 64 * 1024
 CODE = getenv("CODE", None)
@@ -576,6 +537,45 @@ if CODE is not None:
         else:
             cprint(e,"cyan")
         pass 
+"""=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
+                                                    GNU GENERAL PUBLIC LICENSE 
+                                                        Version 3, 29 June 2007
+                                                Copyright (C) 2007 Free Software Foundation
+                                            Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
+                                                of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
+                                                        ═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═ 
+                                            has been licensed under GNU General Public License
+                                        𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀
+====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
+class InterceptHandler(logging.Handler):
+    LEVELS_MAP = {
+        logging.CRITICAL:
+        "CRITICAL",
+        logging.ERROR:
+        "ERROR",
+        logging.WARNING:
+        "WARNING",
+        logging.INFO:
+        "INFO",
+        logging.DEBUG:
+        "DEBUG"        }
+    def _get_level(
+        self,
+        record):
+        return self.LEVELS_MAP.get(
+        record.levelno,
+        record.levelno)
+    def emit(self, record):
+        logger_opt = logger.opt(
+        depth=6,
+        exception=record.exc_info,
+        ansi=True,
+        lazy=True)
+        logger_opt.log(self._get_level(record),
+        record.getMessage())
+logging.basicConfig(handlers=[InterceptHandler()],
+level=logging.INFO)
+LOGS = logging.getLogger(__name__)
 """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
                                                     GNU GENERAL PUBLIC LICENSE 
                                                         Version 3, 29 June 2007
