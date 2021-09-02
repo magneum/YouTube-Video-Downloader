@@ -8,3 +8,4 @@ termcolor
 loguru
 python-dotenv
 pyAesCrypt
+ffmpeg-python
