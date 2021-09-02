@@ -388,7 +388,7 @@ async def video_sender(𝐓𝐮𝐛𝐞: Message, Video_Hole, video_file):
 |   **ꜱɪᴛᴇ:** [🎬𝐘𝐨𝐮𝐓𝐮𝐛𝐞](https://youtube.com)
 |   **Performer:** [{performer}](https://t.me/hypevoidlab)
 |   **Duration:** [{duration}s](https://t.me/hypevoidlab)
-|   **Webpage:** [{webpage_url}](https://t.me/hypevoidlab)
+|   **Webpage:** `{webpage_url}`
 ||
 一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一""",
         parse_mode='markdown')
@@ -406,7 +406,7 @@ async def video_sender(𝐓𝐮𝐛𝐞: Message, Video_Hole, video_file):
 |   **ꜱɪᴛᴇ:** [🎬𝐘𝐨𝐮𝐓𝐮𝐛𝐞](https://youtube.com)
 |   **Performer:** [{performer}](https://t.me/hypevoidlab)
 |   **Duration:** [{duration}s](https://t.me/hypevoidlab)
-|   **Webpage:** [{webpage_url}](https://t.me/hypevoidlab)
+|   **Webpage:** `{webpage_url}`
 ||
 一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一
 """,
