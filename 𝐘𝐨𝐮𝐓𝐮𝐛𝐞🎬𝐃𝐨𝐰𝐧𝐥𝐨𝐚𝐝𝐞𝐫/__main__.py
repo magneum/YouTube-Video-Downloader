@@ -127,8 +127,7 @@ api_id=getenv("API_ID"),
 api_hash=getenv("API_HASH"),
 bot_token=getenv("BOT_TOKEN"),
 session_name="デ𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫デ")
-youtube_next_fetch = 1  
-user_time = {}
+
 
 
 
@@ -243,9 +242,9 @@ filters.private
 & filters.command(
 "start",
 prefixes="/")) 
-def starts(_,ut: Message):
-    ut.delete()
-    ut.reply_photo(
+async def starts(_,𝐓𝐮𝐛𝐞: Message):
+    await 𝐓𝐮𝐛𝐞.delete()
+    await 𝐓𝐮𝐛𝐞.reply_photo(
     "https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
     caption=f"""
 一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一
@@ -304,32 +303,24 @@ has been licensed under GNU General Public License                              
 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀                                                          𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗦𝗼𝘂𝗹 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝗟𝗮𝗯 | 𝗛𝘆𝗽𝗲𝗩𝗼𝗶𝗱𝘀
 ====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
 
-
+youtube_next_fetch = 1  
+user_time = {}
 
 
 @𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜.on_message(
 filters.regex(r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$"))
-def just_get_message(_,ut: Message):
-    just_get_Message(ut)   
-def just_get_Message(ut: Message):
-    ut.delete()
-    ut.reply_chat_action("record_video")
-    userLastDownloadTime = user_time.get(ut.chat.id) 
-    if userLastDownloadTime > datetime.now():
-        ʏօʊȶʊɮɛʟɨ_clock = round((userLastDownloadTime - datetime.now()).total_seconds() / 60, 2)
-        TIME = ut.reply_text(f"**Wait `{ʏօʊȶʊɮɛʟɨ_clock * 60}` seconds before next Request**")
-        time.sleep(1)
-        TIME.delete()
-        return
-    now = datetime.now()
-    user_time[ut.chat.id] = now + \
-                                timedelta(minutes=youtube_next_fetch)
-    try:
-        Video_Hole = HV_YouTube_Video.extract_info(ut.text, download=True)
-        if Video_Hole['duration'] > 1800:
-            ut.reply_photo(
-    "https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
-    caption=f"""
+async def just_get_message(_,𝐓𝐮𝐛𝐞: Message):
+    await just_get_Message(𝐓𝐮𝐛𝐞)   
+async def just_get_Message(𝐓𝐮𝐛𝐞: Message):
+    await 𝐓𝐮𝐛𝐞.delete()
+    await 𝐓𝐮𝐛𝐞.reply_chat_action("record_video")
+    Video_Hole = HV_YouTube_Video.extract_info(
+    𝐓𝐮𝐛𝐞.text,
+    download=False
+    )
+    if Video_Hole['duration'] > 1800:
+        await 𝐓𝐮𝐛𝐞.reply_photo("https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
+        caption=f"""
 一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一
 ||
 ||
@@ -338,20 +329,11 @@ def just_get_Message(ut: Message):
 ||
 ||
 一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一""")
-            return
-        Master_Status_Dl = ut.reply_text("🎬Fetching....",
-        quote=True,
-        disable_notification=False)
-        HV_YouTube_Video.process_info(Video_Hole)
-        ut.reply_chat_action("record_video")
-        Master_Status_Dl.delete()
-    except Exception as e:
-        ut.reply_text(str(e))
-        if HEROKU == "HEROKU":
-            LOGS.info(str(e))
-        else:
-            cprint(e,"cyan")
-        pass 
+        return
+    HV_YouTube_Video.process_info(Video_Hole)
+    video_file = HV_YouTube_Video.prepare_filename(Video_Hole)
+    await video_sender(𝐓𝐮𝐛𝐞, Video_Hole,video_file)
+    await 𝐓𝐮𝐛𝐞.reply_chat_action("record_video")
 
 
 
@@ -370,7 +352,7 @@ has been licensed under GNU General Public License                              
 
 
 
-def video_sender(ut: Message, Video_Hole, video_file):
+async def video_sender(𝐓𝐮𝐛𝐞: Message, Video_Hole, video_file):
     basename = video_file.rsplit(".", 1)[-2]
     if Video_Hole['ext'] == 'webm':
         video_file_opus = basename + ".opus"
@@ -396,7 +378,7 @@ def video_sender(ut: Message, Video_Hole, video_file):
             YouTube_Fetched_Url(thumbnail_url)
     Squared_Thumb = basename + "_nonreshpedSQQ.jpg"
     Shape_It_To_Square(SQ_Thumb, Squared_Thumb)
-    void = ut.reply_photo(
+    void = await 𝐓𝐮𝐛𝐞.reply_photo(
         Squared_Thumb,
         caption=f"""
     ✨🤩 𝙽𝚒𝚌𝚎 𝚌𝚑𝚘𝚒𝚌𝚎! 🤩✨ 
@@ -410,7 +392,7 @@ def video_sender(ut: Message, Video_Hole, video_file):
 ||
 一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一""",
         parse_mode='markdown')
-    ut.reply_video(
+    await 𝐓𝐮𝐛𝐞.reply_video(
         video_file,
         reply_markup=InlineKeyboardMarkup([
         [InlineKeyboardButton("〽️ 𝐆𝐫𝐨𝐮𝐩",url="https://t.me/hypevoids")],
@@ -429,7 +411,7 @@ def video_sender(ut: Message, Video_Hole, video_file):
 一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一
 """,
         thumb=resized_thumb)
-    void.delete()
+    await void.delete()
     try:
         os.remove(video_file)
         os.remove(Master_Thumb)
