@@ -226,7 +226,7 @@ link and send you its music in mere seconds.
         await ut.delete()
         try:
             Video_Hole = HV_YouTube_Video.extract_info(ut.text, download=True)
-            if Video_Hole['duration'] > 10800:
+            if Video_Hole['duration'] > 1800:
                 return
             Master_Status_Dl = await ut.reply_text("🎬Fetching....",
             quote=True,
