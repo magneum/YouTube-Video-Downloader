@@ -248,15 +248,12 @@ async def starts(_,𝐓𝐮𝐛𝐞: Message):
     "https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
     caption=f"""
 一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一
-||
-||
+
 📌I Am 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 that can take any youtube video 
 link and send you its music in mere seconds.
 📌Just send me the 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 video link and wait.
 ⚠️  **ONLY VIDEO! Check below button for AUDIO**
-||
-||
-一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一""",
+""",
     reply_markup=InlineKeyboardMarkup([
     [InlineKeyboardButton("〽️ 𝐆𝐫𝐨𝐮𝐩",url="https://t.me/hypevoids")],
     [InlineKeyboardButton("⚜️ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥",url="https://t.me/hypevoidlab")],
@@ -328,13 +325,10 @@ async def just_get_Message(𝐓𝐮𝐛𝐞: Message):
         await 𝐓𝐮𝐛𝐞.reply_photo("https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
         caption=f"""
 一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一
-||
-||
+
 ⚠️  **Telegram Does not allow users to download media size bigger then 2000mb!**
 ⚠️  **Please try less then 30min of Video...**
-||
-||
-一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一""")
+""")
         return
     HV_YouTube_Video.process_info(Video_Hole)
     video_file = HV_YouTube_Video.prepare_filename(Video_Hole)
@@ -389,14 +383,13 @@ async def video_sender(𝐓𝐮𝐛𝐞: Message, Video_Hole, video_file):
         caption=f"""
     ✨🤩 𝙽𝚒𝚌𝚎 𝚌𝚑𝚘𝚒𝚌𝚎! 🤩✨ 
 🛒𝚈𝚘𝚞𝚛 𝙰𝚞𝚍𝚒𝚘 𝚏𝚒𝚕𝚎 𝚠𝚒𝚕𝚕 𝚋𝚎 𝚑𝚎𝚛𝚎 𝚜𝚑𝚘𝚛𝚝𝚕𝚢
-||
-🏷**ᴛɪᴛʟᴇ:** {title}
+
+🏷**ᴛɪᴛʟᴇ:** `{title}`
 🎬**ꜱɪᴛᴇ:**[𝐘𝐨𝐮𝐓𝐮𝐛𝐞](https://youtube.com)
 💰**ᴘᴇʀꜰᴏʀᴍᴇʀ:**[{performer}](https://t.me/hypevoidlab)
 ⌛️**ᴅᴜʀᴀᴛɪᴏɴ:**[{duration}s](https://t.me/hypevoidlab)
 📡**ʟɪɴᴋ:**__{webpage_url}__
-||
-一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一""",
+""",
         parse_mode='markdown')
     await 𝐓𝐮𝐛𝐞.reply_video(
         video_file,
@@ -407,14 +400,12 @@ async def video_sender(𝐓𝐮𝐛𝐞: Message, Video_Hole, video_file):
         [InlineKeyboardButton("𝐘𝐨𝐮𝐓𝐮𝐛𝐞⭕️𝐌𝐮𝐬𝐢𝐜⭕️𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫",url="https://t.me/HvYouTubeMusicBot")]]),
         caption=f"""
 一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一
-||
-🏷**ᴛɪᴛʟᴇ:** {title}
+
+🏷**ᴛɪᴛʟᴇ:** `{title}`
 🎬**ꜱɪᴛᴇ:**[𝐘𝐨𝐮𝐓𝐮𝐛𝐞](https://youtube.com)
 💰**ᴘᴇʀꜰᴏʀᴍᴇʀ:**[{performer}](https://t.me/hypevoidlab)
 ⌛️**ᴅᴜʀᴀᴛɪᴏɴ:**[{duration}s](https://t.me/hypevoidlab)
 📡**ʟɪɴᴋ:**__{webpage_url}__
-||
-一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一
 """,
         thumb=resized_thumb)
     await void.delete()
