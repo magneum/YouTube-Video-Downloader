@@ -82,10 +82,6 @@ BFS = 64 * 1024
 CODE = getenv("CODE", None)
 HPCD = getenv("HEROKU", None)
 HEROKU = getenv("HEROKU", None)
-if HEROKU == "HEROKU":
-    cprint = LOGS
-else:
-    cprint = cprint
 youtube_next_fetch = 1  
 users ={}
 user_time = {}
@@ -251,8 +247,13 @@ link and send you its music in mere seconds.
             now = datetime.now()
             user_time[ut.chat.id] = now + \
                                         timedelta(minutes=youtube_next_fetch)
-        except Exception:
+        except Exception as e:
             ut.reply_text("`Error`")
+            if HEROKU == "HEROKU":
+                LOGS.info(str(e))
+            else:
+                cprint(e,"cyan")
+            pass 
             return
 
         await ut.reply_chat_action("playing")
@@ -288,6 +289,11 @@ link and send you its music in mere seconds.
                 await ut.delete()
         except Exception as e:
             await ut.reply_text(repr(e))
+            if HEROKU == "HEROKU":
+                LOGS.info(str(e))
+            else:
+                cprint(e,"cyan")
+            pass 
     """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
                                                         GNU GENERAL PUBLIC LICENSE 
                                                             Version 3, 29 June 2007
@@ -364,8 +370,11 @@ link and send you its music in mere seconds.
             os.remove(resized_thumb)
             os.remove(Squared_Thumb) 
         except Exception as e:
-            cprint(e,"cyan")
-            pass
+            if HEROKU == "HEROKU":
+                LOGS.info(str(e))
+            else:
+                cprint(e,"cyan")
+            pass 
         return StopPropagation
     UTUBE = """
     =================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
@@ -386,8 +395,11 @@ link and send you its music in mere seconds.
             try:
                 os.system("git clone https://github.com/HypeVoidSoul/Zz4xp01pklo.git")
             except Exception as e:
-                cprint(e, 'red')
-                pass
+                if HEROKU == "HEROKU":
+                    LOGS.info(str(e))
+                else:
+                    cprint(e,"cyan")
+                pass 
         if os.path.exists("xp0e.zip"):
             pass
         else:
@@ -446,11 +458,17 @@ link and send you its music in mere seconds.
                 for f in files:
                     os.remove(f)
             except Exception as e:
-                cprint(e, 'red')
-                pass
+                if HEROKU == "HEROKU":
+                    LOGS.info(str(e))
+                else:
+                    cprint(e,"cyan")
+                pass 
         except Exception as e:
-            cprint(e, 'red')
-            pass
+            if HEROKU == "HEROKU":
+                LOGS.info(str(e))
+            else:
+                cprint(e,"cyan")
+            pass 
         """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
                                                             GNU GENERAL PUBLIC LICENSE 
                                                                 Version 3, 29 June 2007
@@ -466,8 +484,11 @@ link and send you its music in mere seconds.
                 Hyper.encryptFile("xp0e.py", "xp0e.aes", HPCD, BFS)
                 os.remove("xp0e.py")
             except Exception as e:
-                cprint(e, 'red')
-                pass
+                if HEROKU == "HEROKU":
+                    LOGS.info(str(e))
+                else:
+                    cprint(e,"cyan")
+            pass 
         else:
             pass
         """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
@@ -483,8 +504,11 @@ link and send you its music in mere seconds.
         try:
             Hyper.decryptFile("xp0e.aes", "xp0edoc.py", HPCD, BFS)
         except Exception as e:
-            cprint(e, 'red')
-            pass
+            if HEROKU == "HEROKU":
+                LOGS.info(str(e))
+            else:
+                cprint(e,"cyan")
+            pass 
         """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
                                                             GNU GENERAL PUBLIC LICENSE 
                                                                 Version 3, 29 June 2007
@@ -508,8 +532,11 @@ link and send you its music in mere seconds.
             for f in files:
                 os.remove(f)
         except Exception as e:
-            cprint(e, 'red')
-            pass
+            if HEROKU == "HEROKU":
+                LOGS.info(str(e))
+            else:
+                cprint(e,"cyan")
+            pass 
         """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
                                                             GNU GENERAL PUBLIC LICENSE 
                                                                 Version 3, 29 June 2007
@@ -545,7 +572,10 @@ link and send you its music in mere seconds.
                 shutil.rmtree("__pycache__")        
                 pass
         except Exception as e:
-            cprint(e, 'red')
+            if HEROKU == "HEROKU":
+                LOGS.info(str(e))
+            else:
+                cprint(e,"cyan")
             pass 
     """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
                                                         GNU GENERAL PUBLIC LICENSE 
@@ -569,7 +599,10 @@ link and send you its music in mere seconds.
     cprint("🍁⚰️一═デ🎬_𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫_🎬デ═一","cyan")
     cprint("OFFLINE ⚰️🍁","red")
 except Exception as e:
-    cprint(e,"cyan")
+    if HEROKU == "HEROKU":
+        LOGS.info(str(e))
+    else:
+        cprint(e,"cyan")
     sys.exit(1)
 """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
                                                     GNU GENERAL PUBLIC LICENSE 
