@@ -127,7 +127,8 @@ api_id=getenv("API_ID"),
 api_hash=getenv("API_HASH"),
 bot_token=getenv("BOT_TOKEN"),
 session_name="デ𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫デ")
-
+youtube_next_fetch = 1  
+user_time = {}
 
 
 
@@ -311,11 +312,11 @@ filters.regex(r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/
 def just_get_message(_,ut: Message):
     just_get_Message(ut)   
 def just_get_Message(ut: Message):
-    ut.reply_chat_action("playing")
     ut.delete()
-    youtube_next_fetch = 1  
-    user_time = {}
+    ut.reply_chat_action("record_video")
     userLastDownloadTime = user_time.get(ut.chat.id)
+
+    
     try:
         if userLastDownloadTime > datetime.now():
             ʏօʊȶʊɮɛʟɨ_clock = round((userLastDownloadTime - datetime.now()).total_seconds() / 60, 2)
@@ -326,13 +327,13 @@ def just_get_Message(ut: Message):
     except:
         pass
 
+    
     try:
-        ut.delete()
         now = datetime.now()
         user_time[ut.chat.id] = now + \
                                     timedelta(minutes=youtube_next_fetch)
     except Exception as e:
-        ut.reply_text("`Error`")
+        ut.reply_text("`Error`\n\nInform @HypeVoidSoul | @HypeVoids")
         if HEROKU == "HEROKU":
             LOGS.info(str(e))
         else:
@@ -340,8 +341,8 @@ def just_get_Message(ut: Message):
         pass 
         return
 
-    ut.reply_chat_action("playing")
-    ut.delete()
+    
+    ut.reply_chat_action("record_video")
     try:
         Video_Hole = HV_YouTube_Video.extract_info(ut.text, download=True)
         if Video_Hole['duration'] > 1800:
@@ -361,18 +362,10 @@ def just_get_Message(ut: Message):
         quote=True,
         disable_notification=False)
         HV_YouTube_Video.process_info(Video_Hole)
-        video_file = HV_YouTube_Video.prepare_filename(Video_Hole)
-        task = asyncio.create_task(video_sender(ut, Video_Hole,video_file))
         ut.reply_chat_action("record_video")
         Master_Status_Dl.delete()
-        while not task.done():
-            asyncio.sleep(1)
-            ut.reply_chat_action("playing")
-        ut.reply_chat_action("cancel")
-        if ut.chat.type == "private":
-            ut.delete()
     except Exception as e:
-        ut.reply_text(repr(e))
+        ut.reply_text(str(e))
         if HEROKU == "HEROKU":
             LOGS.info(str(e))
         else:
