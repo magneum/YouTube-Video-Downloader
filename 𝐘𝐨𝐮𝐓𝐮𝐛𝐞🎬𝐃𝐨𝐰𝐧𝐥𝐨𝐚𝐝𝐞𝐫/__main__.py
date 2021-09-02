@@ -238,12 +238,9 @@ link and send you its music in mere seconds.
             now = ut.now()
             𝐘𝐨𝐮𝐓𝐮𝐛𝐞𝐌𝐮𝐬𝐢𝐜_Clock[ut.chat.id] = now + \
                                         timedelta(minutes=youtube_next_fetch)
-
         except Exception:
             await ut.reply_text("`Failed To Fetch Youtube Data... 😔 \nPossible Youtube Blocked server ip \n#error`")
             return
-
-
 
         await ut.reply_chat_action("playing")
         await ut.delete()
