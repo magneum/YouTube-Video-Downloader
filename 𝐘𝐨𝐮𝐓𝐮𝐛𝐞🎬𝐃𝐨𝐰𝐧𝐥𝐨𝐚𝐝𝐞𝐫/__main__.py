@@ -279,14 +279,20 @@ has been licensed under GNU General Public License                              
 ====================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═======================================================================="""
 
 
-
+# YouTube_Opts = {
+# 'format': "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
+# 'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
+# "no_warnings": True,
+# "ignoreerrors": True,
+# 'writethumbnail': True}
 
 VOIDED = YouTube_Opts = {
-'format': "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
+'format': "bestvideo[ext=mp4]",
 'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
 "no_warnings": True,
 "ignoreerrors": True,
-'writethumbnail': True}
+'writethumbnail': True
+}
 HV_YouTube_Video = YoutubeDL(VOIDED)
 
 
