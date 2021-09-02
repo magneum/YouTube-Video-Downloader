@@ -229,8 +229,8 @@ link and send you its music in mere seconds.
     async def just_get_message(_,ut: Message):
         await just_get_Message(ut)   
     async def just_get_Message(ut: Message):
-        ut.reply_chat_action("typing")
-        ut.delete()
+        await ut.reply_chat_action("playing")
+        await ut.delete()
         userLastDownloadTime = user_time.get(ut.chat.id)
         try:
             if userLastDownloadTime > datetime.now():
