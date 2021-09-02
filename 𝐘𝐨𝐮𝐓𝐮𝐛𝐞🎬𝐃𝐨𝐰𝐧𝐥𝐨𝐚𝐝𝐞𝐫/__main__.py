@@ -82,9 +82,6 @@ BFS = 64 * 1024
 CODE = getenv("CODE", None)
 HPCD = getenv("HEROKU", None)
 HEROKU = getenv("HEROKU", None)
-youtube_next_fetch = 1  
-users ={}
-user_time = {}
 """=================================================================═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═==========================================================================
                                                     GNU GENERAL PUBLIC LICENSE 
                                                         Version 3, 29 June 2007
@@ -231,13 +228,15 @@ link and send you its music in mere seconds.
     async def just_get_Message(ut: Message):
         await ut.reply_chat_action("playing")
         await ut.delete()
+        youtube_next_fetch = 1  
+        user_time = {}
         userLastDownloadTime = user_time.get(ut.chat.id)
         try:
             if userLastDownloadTime > datetime.now():
                 ʏօʊȶʊɮɛʟɨ_clock = round((userLastDownloadTime - datetime.now()).total_seconds() / 60, 2)
-                TIME = ut.reply_text(f"**Wait `{ʏօʊȶʊɮɛʟɨ_clock * 60}` seconds before next Request**")
-                time.sleep(1)
-                TIME.delete()
+                TIME = await ut.reply_text(f"**Wait `{ʏօʊȶʊɮɛʟɨ_clock * 60}` seconds before next Request**")
+                await time.sleep(1)
+                await TIME.delete()
                 return
         except:
             pass
