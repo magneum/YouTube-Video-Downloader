@@ -314,35 +314,16 @@ def just_get_message(_,ut: Message):
 def just_get_Message(ut: Message):
     ut.delete()
     ut.reply_chat_action("record_video")
-    userLastDownloadTime = user_time.get(ut.chat.id)
-
-    
-    try:
-        if userLastDownloadTime > datetime.now():
-            ʏօʊȶʊɮɛʟɨ_clock = round((userLastDownloadTime - datetime.now()).total_seconds() / 60, 2)
-            TIME = ut.reply_text(f"**Wait `{ʏօʊȶʊɮɛʟɨ_clock * 60}` seconds before next Request**")
-            time.sleep(1)
-            TIME.delete()
-            return
-    except:
-        pass
-
-    
-    try:
-        now = datetime.now()
-        user_time[ut.chat.id] = now + \
-                                    timedelta(minutes=youtube_next_fetch)
-    except Exception as e:
-        ut.reply_text("`Error`\n\nInform @HypeVoidSoul | @HypeVoids")
-        if HEROKU == "HEROKU":
-            LOGS.info(str(e))
-        else:
-            cprint(e,"cyan")
-        pass 
+    userLastDownloadTime = user_time.get(ut.chat.id) 
+    if userLastDownloadTime > datetime.now():
+        ʏօʊȶʊɮɛʟɨ_clock = round((userLastDownloadTime - datetime.now()).total_seconds() / 60, 2)
+        TIME = ut.reply_text(f"**Wait `{ʏօʊȶʊɮɛʟɨ_clock * 60}` seconds before next Request**")
+        time.sleep(1)
+        TIME.delete()
         return
-
-    
-    ut.reply_chat_action("record_video")
+    now = datetime.now()
+    user_time[ut.chat.id] = now + \
+                                timedelta(minutes=youtube_next_fetch)
     try:
         Video_Hole = HV_YouTube_Video.extract_info(ut.text, download=True)
         if Video_Hole['duration'] > 1800:
