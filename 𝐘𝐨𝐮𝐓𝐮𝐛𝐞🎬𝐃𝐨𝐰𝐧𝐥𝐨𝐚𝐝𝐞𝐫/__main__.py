@@ -292,8 +292,10 @@ has been licensed under GNU General Public License                              
 "|"
 "|"
 "|"
+#"https://telegra.ph/file/afbe2788479c6d7a30678.jpg"
+# [ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best
 VOIDED = YouTube_Opts = {
-'format': "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
+'format': "bestvideo",
 'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
 "no_warnings": True,
 "ignoreerrors": True,
@@ -357,7 +359,7 @@ filters.incoming
 async def just_deny_that(_,𝐓𝐮𝐛𝐞: Message):
     await 𝐓𝐮𝐛𝐞.delete()
     await 𝐓𝐮𝐛𝐞.reply_photo(
-        photo="https://telegra.ph/file/276f806feff4c00c6b501.jpg",
+        photo="https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
         caption=f"""
 一 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 一
 
