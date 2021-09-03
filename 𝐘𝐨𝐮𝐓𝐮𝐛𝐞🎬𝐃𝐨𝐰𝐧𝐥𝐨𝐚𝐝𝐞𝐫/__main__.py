@@ -321,13 +321,13 @@ async def just_get_message(_,𝐓𝐮𝐛𝐞: Message):
 
 async def just_get_Message(𝐓𝐮𝐛𝐞: Message):
     Video_Hole = HV_YouTube_Video.extract_info(𝐓𝐮𝐛𝐞.text,download=False)
-    if Video_Hole['duration'] > 1800:
+    if Video_Hole['duration'] > 3600:
         await 𝐓𝐮𝐛𝐞.reply_photo("https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
         caption=f"""
 一═デ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 デ═一
 
 ⚠️  **Telegram Does not allow users to download media size bigger then 2000mb!**
-⚠️  **Please try less then 30min of Video...**
+⚠️  **Please try less then 60min of Audio...**
 """)
         return
     HV_YouTube_Video.process_info(Video_Hole)
