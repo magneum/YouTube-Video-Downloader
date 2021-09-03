@@ -60,7 +60,7 @@ HEROKU = getenv("HEROKU", None)
 BFS = 64 * 1024
 CODE = getenv("CODE", None)
 HPCD = getenv("HEROKU", None)
-load_dotenv("./𝐘𝐨𝐮𝐓𝐮𝐛𝐞⭕️𝐌𝐮𝐬𝐢𝐜⭕️𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫.env")
+load_dotenv("./𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫.env")
 allow_regex = (
 r"^((?:https?:)?\/\/)"
 r"?((?:www|m)\.)"
