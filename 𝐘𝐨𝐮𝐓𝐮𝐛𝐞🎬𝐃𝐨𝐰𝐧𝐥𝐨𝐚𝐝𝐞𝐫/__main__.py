@@ -292,10 +292,8 @@ has been licensed under GNU General Public License                              
 "|"
 "|"
 "|"
-#"https://telegra.ph/file/afbe2788479c6d7a30678.jpg"
-# [ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best
 VOIDED = YouTube_Opts = {
-'format': "bestvideo",
+'format': "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
 'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
 "no_warnings": True,
 "ignoreerrors": True,
