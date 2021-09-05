@@ -297,7 +297,7 @@ try:
     #     "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio",
     #     "bestvideo[vcodec^=avc]+bestaudio[acodec^=mp4a]/best[vcodec^=avc]/best",
     # ]
-    VOIDED = YouTube_Opts = {
+    VOIDED = {
     'format': "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio",
     'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
     "no_warnings": True,
