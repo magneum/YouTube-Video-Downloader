@@ -292,9 +292,13 @@ has been licensed under GNU General Public License                              
 "|"
 "|"
 "|"
-# [ext=webm]
+formats = [
+    "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio",
+    "bestvideo[vcodec^=avc]+bestaudio[acodec^=mp4a]/best[vcodec^=avc]/best",
+    ""
+]
 VOIDED = YouTube_Opts = {
-'format': "bestvideo",
+'format': formats,
 "--encoder_codec": "mp4v",
 'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
 "no_warnings": True,
