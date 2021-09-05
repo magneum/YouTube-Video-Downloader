@@ -1,7 +1,7 @@
 {"logo": "https://telegra.ph/file/afbe2788479c6d7a30678.jpg",
 "name": "𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫",
 "repository": "https://github.com/HypeVoidSoul/YouTube-Downloader.git",
-"stack": "heroku-20",
+"stack": "container",
 "description": "𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫",
 "website": "https://t.me/hypevoids",
 "env": {
@@ -18,7 +18,7 @@
 "description":"KEEP IT HEROKU!!!!!!!",
 "required":true},
 "BOT_TOKEN":{
-"description": "Your @HvApiBot BOT Token.",
+"description": "Your @Hvapibot BOT Token.",
 "required":true}},
 "buildpacks": [
         {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"},
