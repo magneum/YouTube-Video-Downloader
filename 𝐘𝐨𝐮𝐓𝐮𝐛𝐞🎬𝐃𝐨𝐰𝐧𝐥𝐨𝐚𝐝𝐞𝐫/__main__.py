@@ -295,7 +295,6 @@ has been licensed under GNU General Public License                              
 formats = [
     "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio",
     "bestvideo[vcodec^=avc]+bestaudio[acodec^=mp4a]/best[vcodec^=avc]/best",
-    ""
 ]
 VOIDED = YouTube_Opts = {
 'format': formats,
@@ -323,21 +322,21 @@ has been licensed under GNU General Public License                              
 "|"
 "|"
 "|"
-# def ask_link_info(yturl):
-#     ydl = youtube_dl.YoutubeDL()
-#     with ydl:
-#         qualityList = []
-#         reck = ydl.extract_info(yturl, download=False)
-#         for format in reck['formats']:
-#             if not "dash" in str(format['format']).lower():
-#                 qualityList.append(
-#                 {
-#                     "format": format['format'],
-#                     "filesize": format['filesize'],
-#                     "format_id": format['format_id'],
-#                     "yturl": yturl
-#                 })
-#         return reck['title'], reck['thumbnail'], qualityList
+def ask_link_info(yturl):
+    ydl = youtube_dl.YoutubeDL()
+    with ydl:
+        qualityList = []
+        reck = ydl.extract_info(yturl, download=False)
+        for format in reck['formats']:
+            if not "dash" in str(format['format']).lower():
+                qualityList.append(
+                {
+                    "format": format['format'],
+                    "filesize": format['filesize'],
+                    "format_id": format['format_id'],
+                    "yturl": yturl
+                })
+        return reck['title'], reck['thumbnail'], qualityList
 "|"
 "|"
 "|"
@@ -427,10 +426,10 @@ async def just_get_Message(𝐓𝐮𝐛𝐞: Message):
     except:
         pass
 
-    # url = 𝐓𝐮𝐛𝐞.text.strip()
+    url = 𝐓𝐮𝐛𝐞.text.strip()
     try:
-        # title, thumbnail_url, formats = ask_link_info(url)
-        # print(title, thumbnail_url, formats)
+        title, thumbnail_url, formats = ask_link_info(url)
+        print(title, thumbnail_url, formats)
         now = datetime.now()
         user_time[𝐓𝐮𝐛𝐞.chat.id] = now + \
                                      timedelta(minutes=youtube_next_fetch)
