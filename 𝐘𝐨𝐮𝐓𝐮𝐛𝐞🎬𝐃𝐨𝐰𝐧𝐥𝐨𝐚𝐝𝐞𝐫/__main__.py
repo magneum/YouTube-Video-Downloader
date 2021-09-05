@@ -292,8 +292,9 @@ has been licensed under GNU General Public License                              
 "|"
 "|"
 "|"
+#+bestaudio[ext=m4a]/best[ext=mp4]
 VOIDED = YouTube_Opts = {
-'format': "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]",
+'format': "bestvideo[ext=mp4]",
 'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
 "no_warnings": True,
 "ignoreerrors": True,
