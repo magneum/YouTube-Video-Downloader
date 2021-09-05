@@ -292,8 +292,9 @@ has been licensed under GNU General Public License                              
 "|"
 "|"
 "|"
+# [ext=webm]
 VOIDED = YouTube_Opts = {
-'format': "bestvideo[ext=webm]",
+'format': "bestvideo",
 'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
 "no_warnings": True,
 "ignoreerrors": True,
