@@ -294,7 +294,7 @@ has been licensed under GNU General Public License                              
 "|"
 formats = [
     "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio",
-    "bestvideo[vcodec^=avc]+bestaudio[acodec^=mp4a]/best[vcodec^=avc]/best",
+    #"bestvideo[vcodec^=avc]+bestaudio[acodec^=mp4a]/best[vcodec^=avc]/best",
 ]
 VOIDED = YouTube_Opts = {
 'format': formats,
