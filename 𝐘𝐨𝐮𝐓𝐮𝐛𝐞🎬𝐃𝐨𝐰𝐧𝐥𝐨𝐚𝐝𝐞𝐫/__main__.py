@@ -299,7 +299,7 @@ try:
     #     "bestvideo[vcodec^=avc]+bestaudio[acodec^=mp4a]/best[vcodec^=avc]/best",
     # ]
     VOIDED = {
-    'format': "best,
+    'format': "best",
     'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
     "no_warnings": True,
     "ignoreerrors": True,
