@@ -3,7 +3,7 @@
 "repository": "https://github.com/Krakinz/YouTube-Video-Downloader.git",
 "stack": "container",
 "description": "𝐘𝐨𝐮𝐓𝐮𝐛𝐞🎬𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫",
-"website": "https://t.me/hypevoids",
+"website": "https://t.me/Krakns",
 "env": {
 "API_ID":{
 "description":"api_id part of your Telegram API Key From @HVApiBot Only",
