@@ -18,7 +18,7 @@
 ## 〽️ MΣΣƬ US ӨЯ CΉΣCK ӨƬΉΣЯ BӨƬS   
 - [![Generic badge](https://img.shields.io/badge/YouTube🎬Downloader-Vïå_ßð†-red.svg)](https://t.me/HVYouTubeBot)
 𝙳𝚒𝚛𝚎𝚌𝚝𝚕𝚢 𝚞𝚜𝚎 𝚃𝚑𝚎 𝙱𝚘𝚝 𝚒𝚗 𝚝𝚎𝚕𝚎𝚐𝚛𝚊𝚖
-- [![Generic badge](https://img.shields.io/badge/KrakinzBot-Vïå_ßð†-orange.svg)](https://t.me/KrakinzBot) 𝘛𝘶𝘳𝘯 𝘰𝘯 𝘣𝘰𝘵 𝘪𝘯 𝘵𝘦𝘭𝘦𝘨𝘳𝘢𝘮 𝘢𝘯𝘥 𝘵𝘺𝘱𝘦 /us
+- [![Generic badge](https://img.shields.io/badge/KrakinzBot-Vïå_ßð†-Yellow.svg)](https://t.me/KrakinzBot) 𝘛𝘶𝘳𝘯 𝘰𝘯 𝘣𝘰𝘵 𝘪𝘯 𝘵𝘦𝘭𝘦𝘨𝘳𝘢𝘮 𝘢𝘯𝘥 𝘵𝘺𝘱𝘦 /us
 
 
 
